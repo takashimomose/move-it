@@ -1,0 +1,354 @@
+/* メインビジュアル全体 */
+.mainvisual {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* テキスト部分 */
+.mainvisual .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 10;
+    width: 100%;
+}
+
+.mainvisual .text .title {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.mainvisual .text .btn {
+    display: inline-block;
+    padding: 20px 40px;
+    background-color: #08B355;
+    color: white;
+    text-decoration: none;
+    border-radius: 40px;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+}
+
+.mainvisual .text .btn:hover {
+    filter: brightness(1.2);
+}
+
+/* 画像リスト */
+.mainvisual .fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 1;
+}
+
+.mainvisual .fade li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.mainvisual .fade li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.mainvisual .fade li.active {
+    opacity: 1;
+}
+
+/* イントロダクション */
+.introduction {
+    display: flex;
+    /* 子要素を横並びにする */
+    align-items: center;
+    /* 縦方向の位置を中央揃えにする */
+    gap: 100px;
+    /* 子要素間の間隔を調整 */
+    /* width: calc(100% - 60px); */
+    margin: 0 auto;
+    max-width: 1920px;
+    padding: 40px 0;
+}
+
+.introduction-image {
+    width: 50%;
+    /* 横幅を半分に設定 */
+    height: auto;
+    /* アスペクト比を保つ */
+    object-fit: cover;
+    /* 画像が枠を埋める */
+    border-radius: 0 40px 40px 0;
+    /* 右上の角を丸くする */
+}
+
+.introduction-text {
+    width: 50%;
+    /* 横幅を半分に設定 */
+    font-size: 16px;
+    /* テキストのサイズを調整 */
+    line-height: 1.6;
+    /* 行間を調整して読みやすく */
+    padding-right: 40px;
+}
+
+.introduction-text h2 {
+    font-size: 34px;
+    color: #08B355;
+    margin-bottom: 40px;
+}
+
+.introduction-text p {
+    font-size: 16px;
+}
+
+/* 要素 スクロール時動作　共通 */
+.fade-in-on-scroll {
+    opacity: 0;
+    /* 初期状態で透明 */
+    transform: translateY(60px);
+    /* 下に60pxずらす */
+    transition: opacity 0.6s ease, transform 0.3s ease;
+    /* フェードインのスムーズさ */
+}
+
+.fade-in-on-scroll.is-visible {
+    opacity: 1;
+    /* 表示状態 */
+    transform: translateY(0);
+    /* 元の位置に戻る */
+}
+
+/* よくある質問 */
+
+.decoration {
+    display: inline-block;
+    font-size: 200px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    transform: translateX(-100%);
+    /* 初期位置を画面外に */
+    opacity: 0;
+    /* 初期は非表示 */
+    transition: transform 0.3s ease-out, opacity 0.6s ease-out;
+    /* スライドイン＆フェードイン */
+}
+
+.decoration.is-visible {
+    transform: translateX(0);
+    /* アニメーション後の位置 */
+    opacity: 0.05;
+    /* 表示 */
+}
+
+.faq-label h2 {
+    text-align: center;
+    font-size: 23px;
+    color: #08B355;
+    margin-bottom: 40px;
+}
+
+.faq-label .description {
+    text-align: center;
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.container-left {
+    display: flex;
+    flex-wrap: wrap;
+    /* 必要に応じて折り返し */
+    align-items: flex-start;
+    /* 上から順に揃える */
+    box-sizing: border-box;
+    min-height: 200px;
+    /* 最低高さを指定 */
+    margin-bottom: 40px;
+}
+
+.container-left .left {
+    width: 60%;
+    /* 幅を調整 */
+    background-color: #F8F4E6;
+    /* 左側の背景色 */
+    display: flex;
+    /* Flexbox を適用 */
+    justify-content: center;
+    /* 横方向に中央寄せ */
+    align-items: center;
+    /* 縦方向に中央寄せ */
+    box-sizing: border-box;
+    border-radius: 0 40px 40px 0;
+    padding: 40px;
+}
+
+.content {
+    max-width: 80%;
+    text-align: left;
+    /* テキストを左揃え */
+}
+
+.question-header {
+    display: flex;
+    align-items: center;
+    /* spanとh3を垂直方向で揃える */
+    gap: 10px;
+    /* spanとh3の間隔 */
+    margin-bottom: 20px;
+}
+
+.question-header span {
+    display: inline-block;
+    font-size: 48px;
+    color: #08B355;
+    font-weight: bold;
+}
+
+.question-header h3 {
+    font-size: 22px;
+    margin: 0;
+}
+
+.content p {
+    margin-top: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container-right {
+    display: flex;
+    flex-wrap: wrap;
+    /* 必要に応じて折り返し */
+    align-items: flex-start;
+    /* 上から順に揃える */
+    box-sizing: border-box;
+    min-height: 200px;
+    /* 最低高さを指定 */
+}
+
+.container-right .right {
+    width: 60%;
+    /* 幅を調整 */
+    background-color: #F0F6FA;
+    /* 背景色 */
+    display: flex;
+    /* Flexbox を適用 */
+    justify-content: center;
+    /* 横方向に中央寄せ */
+    align-items: center;
+    /* 縦方向に中央寄せ */
+    box-sizing: border-box;
+    border-radius: 40px 0 0 40px;
+    /* 右の角を丸く */
+    padding: 40px;
+}
+
+.container-right .left {
+    flex: 1;
+    /* 左側を残りのスペースに割り当て */
+}
+
+/* 募集要項 */
+.recruit-wrapper {
+    width: calc(100% - 60px);
+    max-width: 1120px;
+    padding: 40px 0;
+    margin: 0 auto;
+    align-items: center;
+}
+
+
+.recruit-label h2 {
+    text-align: center;
+    font-size: 23px;
+    color: #08B355;
+    margin-bottom: 40px;
+}
+
+.recruit-label .description {
+    text-align: center;
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.recruit-label p {
+    font-size: 16px;
+    padding: 0 40px;
+    margin-bottom: 40px;
+}
+
+.recruit-thead th {
+    border-top: none;
+    border-radius: 15px 0 0 0;
+    background: #08B355;
+    width: 24.94%;
+    text-align: left;
+    font-weight: 700;
+    padding-left: 80px;
+}
+
+.recruit-thead td {
+    border-radius: 0 15px 0 0;
+    background: #F0F6FA;
+    width: 75.06%;
+    padding-left: 40px;
+    padding-right: 111px;
+    height: 40px;
+}
+
+.recruit-tbody th {
+    color: #fff;
+    background: #08B355;
+    width: 24.94%;
+    text-align: left;
+    font-weight: 700;
+    padding-left: 80px;
+    border-top: 1px solid #08B355;
+}
+
+.recruit-tbody td {
+    background: #F0F6FA;
+    width: 75.06%;
+    padding-left: 40px;
+    padding-right: 111px;
+}
+
+.recruit-tfoot th {
+    border-top: none;
+    border-radius: 0 0 0 15px;
+    background: #08B355;
+    width: 24.94%;
+    text-align: left;
+    font-weight: 700;
+    padding-left: 80px;
+}
+
+.recruit-tfoot td {
+    border-radius: 0 0 15px 0;
+    background: #F0F6FA;
+    width: 75.06%;
+    padding-left: 40px;
+    padding-right: 111px;
+    height: 40px;
+}

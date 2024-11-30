@@ -1,0 +1,103 @@
+/* sanitize.css */
+
+/* 1. すべての要素にボックスサイズを指定 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. マージンをリセット */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dd,
+ol,
+ul,
+figure,
+hr {
+    margin: 0;
+}
+
+/* 3. リストのスタイルをリセット */
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* 4. リンクの装飾をリセット */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 5. テーブルのスタイルをリセット */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+/* 6. 画像とメディア要素のスタイルをリセット */
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 7. フォーム要素のリセット */
+button,
+input,
+select,
+textarea {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    border: none;
+    background: none;
+    box-shadow: none;
+    outline: none;
+    appearance: none;
+}
+
+textarea {
+    resize: none;
+}
+
+/* 8. スクロールバーをシンプルに */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #aaa;
+}
+
+::-webkit-scrollbar-track {
+    background: #f4f4f4;
+}
+
+/* 必要に応じてカスタマイズ可能 */
