@@ -20,21 +20,23 @@
 }
 
 .mainvisual .text .title {
-    font-size: 60px;
+    font-size: 2.5rem;
     font-weight: 700;
     line-height: 1.5;
+    padding: 0 20px;
     margin-bottom: 20px;
 }
 
 .mainvisual .text .btn {
     display: inline-block;
-    padding: 20px 40px;
-    background-color: #08B355;
-    color: white;
+    padding: 15px 30px;
+    background-color: #FEE101;
+    color: #000;
     text-decoration: none;
     border-radius: 40px;
     transition: background-color 0.3s ease;
     font-size: 20px;
+    font-weight: 700;
 }
 
 .mainvisual .text .btn:hover {
@@ -76,48 +78,69 @@
 }
 
 /* イントロダクション */
-.introduction {
-    display: flex;
-    /* 子要素を横並びにする */
+.introduction-wrapper {
+    width: calc(100% - 60px);
+    max-width: 1024px;
+    margin: 0 auto 40px auto;
     align-items: center;
-    /* 縦方向の位置を中央揃えにする */
-    gap: 100px;
-    /* 子要素間の間隔を調整 */
-    /* width: calc(100% - 60px); */
-    margin: 0 auto;
-    max-width: 1920px;
-    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
 }
 
-.introduction-image {
-    width: 50%;
-    /* 横幅を半分に設定 */
+.introduction-wrapper .right-panel {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    /* リストを縦に並べる */
+    margin-left: 20px;
+}
+
+.introduction-wrapper .right-panel h2 {
+    font-size: 2rem;
+    margin: 20px 0;
+    font-weight: 700;
+}
+
+.introduction-wrapper .right-panel h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #08B355;
+    margin-bottom: 20px;
+}
+
+.introduction-wrapper .left-panel {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    /* リストを縦に並べる */
+    margin-right: 20px;
+}
+
+.introduction-wrapper .left-panel h1 {
+    font-family: "Work Sans", serif;
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.introduction-wrapper .left-panel .description {
+    font-size: 1.625rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.introduction-wrapper .left-panel p {
+    margin-bottom: 20px;
+}
+
+.introduction-wrapper .left-panel img {
+    width: 100%;
+    /* 画像を親要素に合わせる */
     height: auto;
     /* アスペクト比を保つ */
-    object-fit: cover;
-    /* 画像が枠を埋める */
-    border-radius: 0 40px 40px 0;
-    /* 右上の角を丸くする */
-}
-
-.introduction-text {
-    width: 50%;
-    /* 横幅を半分に設定 */
-    font-size: 16px;
-    /* テキストのサイズを調整 */
-    line-height: 1.6;
-    /* 行間を調整して読みやすく */
-    padding-right: 40px;
-}
-
-.introduction-text h2 {
-    font-size: 34px;
-    color: #08B355;
-    margin-bottom: 40px;
-}
-
-.introduction-text p {
-    font-size: 16px;
+    display: block;
+    border-radius: 8px;
+    /* 角を少し丸める */
 }
 
 /* 要素 スクロール時動作　共通 */
@@ -138,12 +161,19 @@
 }
 
 /* よくある質問 */
+.faq-label {
+    width: calc(100% - 60px);
+    max-width: 700px;
+    /* padding: 40px 0; */
+    margin: 0 auto;
+    align-items: center;
+}
 
 .decoration {
     display: inline-block;
-    font-size: 200px;
+    font-family: "Work Sans", sans-serif;
+    font-size: 6rem;
     font-weight: 700;
-    margin-bottom: 40px;
     transform: translateX(-100%);
     /* 初期位置を画面外に */
     opacity: 0;
@@ -155,20 +185,20 @@
 .decoration.is-visible {
     transform: translateX(0);
     /* アニメーション後の位置 */
-    opacity: 0.05;
+    opacity: 0.03;
     /* 表示 */
 }
 
 .faq-label h2 {
     text-align: center;
-    font-size: 23px;
+    font-size: 2rem;
     color: #08B355;
     margin-bottom: 40px;
 }
 
 .faq-label .description {
     text-align: center;
-    font-size: 28px;
+    font-size: 1.625rem;
     color: #000;
     margin-bottom: 40px;
 }
@@ -202,7 +232,7 @@
 }
 
 .content {
-    max-width: 80%;
+    max-width: 100%;
     text-align: left;
     /* テキストを左揃え */
 }
@@ -224,7 +254,7 @@
 }
 
 .question-header h3 {
-    font-size: 22px;
+    font-size: 1.325rem;
     margin: 0;
 }
 
@@ -268,32 +298,126 @@
     /* 左側を残りのスペースに割り当て */
 }
 
+/* 求めるのはこんな方 */
+.requirements-wrapper {
+    width: calc(100% - 60px);
+    max-width: 1024px;
+    /* padding: 40px 0; */
+    margin: 0 auto;
+    /* align-items: center;
+    display: flex;
+    justify-content: space-between; */
+}
+
+.requirements-label h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #08B355;
+    margin-bottom: 40px;
+}
+
+.requirements-label .description {
+    text-align: center;
+    font-size: 1.625rem;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.together {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-index {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    /* リストを縦に並べる */
+    margin-left: 20px;
+}
+
+.left-index a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    /* リストアイテム間のスペース */
+}
+
+.left-index a img {
+    width: 70px;
+    margin-right: 10px;
+    /* アイコンとテキストの間隔 */
+}
+
+.right-panel {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    /* アイテムを縦に並べる */
+    margin-right: 20px;
+}
+
+.item {
+    margin-bottom: 20px;
+    /* アイテム間のスペース */
+}
+
+.item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.item p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.item .description {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #08B355;
+}
+
+.scrollin img {
+    width: 100%;
+    /* 画像をコンテナ幅に合わせる */
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+
+
 /* 募集要項 */
 .recruit-wrapper {
     width: calc(100% - 60px);
-    max-width: 1120px;
-    padding: 40px 0;
-    margin: 0 auto;
+    max-width: 1024px;
+    /* padding: 40px 0; */
+    margin: 0 auto 40px auto;
     align-items: center;
 }
 
 
 .recruit-label h2 {
     text-align: center;
-    font-size: 23px;
+    font-size: 2rem;
     color: #08B355;
     margin-bottom: 40px;
 }
 
 .recruit-label .description {
     text-align: center;
-    font-size: 28px;
+    font-size: 1.625rem;
     color: #000;
     margin-bottom: 20px;
 }
 
 .recruit-label p {
-    font-size: 16px;
+    font-size: 1rem;
     padding: 0 40px;
     margin-bottom: 40px;
 }
@@ -305,7 +429,7 @@
     width: 24.94%;
     text-align: left;
     font-weight: 700;
-    padding-left: 80px;
+    padding-left: 60px;
 }
 
 .recruit-thead td {
@@ -323,7 +447,7 @@
     width: 24.94%;
     text-align: left;
     font-weight: 700;
-    padding-left: 80px;
+    padding-left: 50px;
     border-top: 1px solid #08B355;
 }
 
@@ -341,7 +465,7 @@
     width: 24.94%;
     text-align: left;
     font-weight: 700;
-    padding-left: 80px;
+    padding-left: 50px;
 }
 
 .recruit-tfoot td {
@@ -351,4 +475,172 @@
     padding-left: 40px;
     padding-right: 111px;
     height: 40px;
+}
+
+/* 会社概要 */
+.company-wrapper {
+    width: calc(100% - 60px);
+    max-width: 1024px;
+    /* padding: 40px 0; */
+    margin: 0 auto 40px auto;
+    align-items: center;
+}
+
+
+.company-label h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #08B355;
+    margin-bottom: 40px;
+}
+
+.company-label .description {
+    text-align: center;
+    font-size: 1.625rem;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.company-label p {
+    font-size: 1rem;
+    padding: 0 40px;
+    margin-bottom: 40px;
+}
+
+.company-thead th {
+    border-top: none;
+    border-radius: 15px 0 0 0;
+    background: #08B355;
+    width: 24.94%;
+    text-align: left;
+    font-weight: 700;
+    padding-left: 60px;
+}
+
+.company-thead td {
+    border-radius: 0 15px 0 0;
+    background: #F0F6FA;
+    width: 75.06%;
+    padding-left: 40px;
+    padding-right: 111px;
+    height: 40px;
+}
+
+.company-tbody th {
+    color: #fff;
+    background: #08B355;
+    width: 24.94%;
+    text-align: left;
+    font-weight: 700;
+    padding-left: 50px;
+    border-top: 1px solid #08B355;
+}
+
+.company-tbody td {
+    background: #F0F6FA;
+    width: 75.06%;
+    padding-left: 40px;
+    padding-right: 111px;
+}
+
+.company-tfoot th {
+    border-top: none;
+    border-radius: 0 0 0 15px;
+    background: #08B355;
+    width: 24.94%;
+    text-align: left;
+    font-weight: 700;
+    padding-left: 50px;
+}
+
+.company-tfoot td {
+    border-radius: 0 0 15px 0;
+    background: #F0F6FA;
+    width: 75.06%;
+    padding-left: 40px;
+    padding-right: 111px;
+    height: 40px;
+}
+
+/* メディアクエリでレスポンシブ対応 */
+@media (max-width: 768px) {
+    .recruit-tbody th {
+        padding-left: 20px;
+        white-space: nowrap;
+    }
+
+    .recruit-tbody td {
+        padding-left: 20px;
+        padding-right: 30px;
+    }
+
+    .recruit-wrapper {
+        width: calc(100% - 50px);
+    }
+
+    .company-tbody th {
+        padding-left: 20px;
+        white-space: nowrap;
+    }
+
+    .company-tbody td {
+        padding-left: 20px;
+        padding-right: 30px;
+    }
+
+    .company-wrapper {
+        width: calc(100% - 50px);
+    }
+}
+
+/* メディアクエリでレスポンシブ対応 */
+@media (max-width: 480px) {
+    .introduction-wrapper {
+        display: block;
+    }
+
+    .introduction-wrapper .left-panel {
+        width: auto;
+        margin: auto;
+    }
+
+    .introduction-wrapper .right-panel {
+        width: auto;
+        margin: auto;
+    }
+
+    .decoration {
+        font-size: 2.5rem;
+        margin: 20px 0px 0px 28px;
+    }
+
+    .container-left .left {
+        width: 90%;
+    }
+
+    .container-right .right {
+        width: 90%;
+    }
+
+    .recruit-label p {
+        padding: 0;
+    }
+
+    .company-label p {
+        padding: 0;
+    }
+
+    .together {
+        display: block;
+    }
+
+    /* .requirements-wrapper {
+        display: block;
+    } */
+
+    .left-index,
+    .right-panel {
+        width: auto;
+        margin: auto;
+    }
 }

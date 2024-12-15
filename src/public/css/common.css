@@ -1,67 +1,119 @@
 html {
-    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Zen Maru Gothic", sans-serif;
 }
 
 /* ヘッダー */
 
 .header {
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    background-color: white;
-    z-index: 1000; /* 必要に応じて重なり順を調整 */
-}
-
-.header-wrapper {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 1120px;
-    padding: 0 16px;
+    max-width: 1024px;
     margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    /* ボタンの基準位置を設定 */
 }
 
-.header-wrapper ul {
-    display: flex;
-    align-items: center;
+/* Instagramボタンのスタイル */
+.instagram-icon {
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    background-color: #FFF;
+    color: #000;
+    text-decoration: none;
+    /* font-size: 14px;
+    font-weight: bold; */
+    text-align: center;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
+    transition: background-color 0.3s ease;
+    z-index: 50;
 }
 
-.header-wrapper li {
-    margin-right: 30px;
-    font-size: 20px;
+.instagram-icon img {
+    width: 100%; /* 親の幅内でアイコンをスケール */
+    height: auto; /* アスペクト比を維持 */
+    margin-bottom: 0px;
 }
 
-.header-wrapper li:last-child {
-    margin-right: 0;
+.instagram-icon:hover {
+    opacity: 0.7;
+    color: #fff;
 }
 
-.logo {
+/* 追従ボタンのスタイル */
+.floating-btn {
+    position: absolute;
+    /* 画面に固定 */
+    top: 0px;
+    /* 上から20px */
+    right: 0px;
+    /* 右から20px */
+    padding: 10px 20px;
+    background-color: #FEE101;
+    color: #000;
+    text-decoration: none;
+    border-radius: 0px 0px 10px 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    z-index: 50;
+}
+
+.floating-btn:hover {
+    opacity: 0.7;
+    color: #fff;
+}
+
+.header h1 {
+    font-style: italic;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.header img {
     width: 200px;
-    line-height: 1px;
-    margin-right: 60px;
+    /* line-height: 1px; */
+    margin: 0 auto 40px auto;
 }
 
-.logo a {
+.header img a {
     display: block;
 }
 
-.contact {
-    width: 200px;
-    height: 80px;
-    line-height: 80px;
-    background-color: #08B355;
-    color: #fff;
-    font-size: 20px;
-    display: inline-block;
-    text-align: center;
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.contact:hover {
-    filter: brightness(1.2);
+.menu,
+.inquiry {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1rem;
 }
+
+.menu li {
+    margin-right: 30px;
+    /* white-space: nowrap; */
+}
+
+.inquiry li {
+    margin-left: 30px;
+}
+
+.menu li a:hover,
+.inquiry li a:hover {
+    color: #08B355;
+    /* ホバー時の色を変更 */
+}
+
 
 /* フッター */
 .footer {
@@ -84,7 +136,7 @@ html {
     justify-content: space-around;
     align-items: flex-start;
     width: 100%;
-    max-width: 1120px;
+    max-width: 1000px;
     padding: 0 16px;
     margin: 0 auto;
 }
@@ -93,15 +145,129 @@ html {
     font-weight: bold;
 }
 
-.menu {
+.footer-menu {
     padding: 10px 0 0 10px;
 }
 
-.menu li {
+.footer-menu li {
     margin-bottom: 3px;
 }
 
 .copyright {
     font-size: 16px;
     text-align: center;
+}
+
+.toggle_btn,
+.close_btn {
+    display: none;
+}
+
+.inquiry-icon {
+    display: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .toggle_btn {
+        display: inline-block;
+        cursor: pointer;
+        font-size: 1.875rem;
+    }
+
+    /* ハンバーガーメニューを開いたときに表示 */
+    #mask {
+        visibility: hidden;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(5, 94, 45, 0.8);
+        z-index: 100;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    #mask.open {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .close_btn {
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 1.875rem;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .nav-wrapper {
+        display: block;
+        color: #fff;
+    }
+
+    .menu,
+    .inquiry {
+        display: block;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .menu {
+        margin-top: 80px;
+    }
+
+    .menu li {
+        margin-right: 0;
+    }
+
+    .inquiry li {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .menu li {
+        margin-bottom: 20px;
+    }
+
+    .floating-btn {
+        display: none;
+    }
+
+    /* 追従ボタンのスタイル */
+    .inquiry-icon {
+        display: block;
+        position: absolute;
+        width: 15%;
+        top: 130px;
+        right: 0px;
+        padding: 2.5%;
+        background-color: #FEE101;
+        color: #000;
+        text-decoration: none;
+        border-radius: 10px 0px 0px 10px;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); */
+        transition: background-color 0.3s ease;
+        z-index: 50;
+    }
+
+    .inquiry-icon img {
+        margin-bottom: 0px;
+    }
+
+    .inquiry-icon:hover {
+        opacity: 0.7;
+        color: #fff;
+    }
 }

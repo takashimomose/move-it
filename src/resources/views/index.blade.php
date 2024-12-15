@@ -1,4 +1,4 @@
-@extends('layouts.common')
+@extends('layouts.app')
 
 @section('title', 'トップ')
 
@@ -11,8 +11,8 @@
         <!-- メインビジュアル -->
         <div class="mainvisual">
             <div class="text">
-                <p class="title">ヤマトより、佐川より速い！<br>爆速宅配サービスは「Move It」だけ！</p>
-                <a class="btn" href="#">代表の熱い言葉を見る</a>
+                <p class="title">動く力で、すべて人を笑顔へ。<br>Delivering Smiles.</p>
+                <a class="btn" href="#introduction">Move Itとは</a>
             </div>
             <ul class="fade">
                 <li><img src="images/mainvisual1.jpg" alt=""></li>
@@ -21,24 +21,82 @@
             </ul>
         </div>
 
-        <section class="introduction">
-            <img class="introduction-image fade-in-on-scroll" src="https://oceans-driver.co.jp/assets/images/top/image1.jpg"
-                alt="">
-            <div class="introduction-text fade-in-on-scroll">
-                <h2>サービスドライバーという<br>やりがいを創造する</h2>
-                <p>
-                    モノを運ぶだけが配送業ではない、<br>
-                    お客さまの要望に応えるだけがサービス業でもない。<br>
-                    私たち株式会社Move Itは、お客さまの本当のご要望にお応えし、お客さまと一緒になってゴールを目指す企業専門の配送サービス会社です。<br>
-                    「配送とサービス」を掛け合わせた“サービスドライバー”たちによって、取引先約100社以上のビジネスの可能性をサポートしています。<br>
-                    <br>
-                    当社は、ドライバーさんが一生涯働ける安定した職場環境づくりを大切に考えています。<br>
-                    軽貨物ドライバーになりたい方、すでに経験が豊富な方、私たちとともに、軽貨物輸送の新しいステージへ走り出しませんか。
-                </p>
+        <section id="introduction" class="introduction">
+            <span class="decoration fade-in-on-scroll">ABOUT US</span>
+            <div class="introduction-wrapper">
+                <div class="left-panel">
+                    <h1 class="fade-in-on-scroll">MOVE IT.</h1>
+                    <p class="description fade-in-on-scroll">動く力で、すべての人を笑顔へ。</p>
+                    <p class="fade-in-on-scroll">つなぐ、動く、届ける。そしてすべての人を笑顔へと導く。<br>
+                        私たちMove Itは、あらゆる企業課題に対して行動を起こし、動く力で、笑顔を未来へつなぎます。</p>
+                    <img class="introduction-image fade-in-on-scroll"
+                        src="https://leaner-mag.jp/wp-content/uploads/2021/05/%E6%B3%95%E4%BA%BA%E5%90%91%E3%81%91%E5%AE%85%E9%85%8D%E4%BE%BF.jpg"
+                        alt="">
+                </div>
+                <div class="right-panel fade-in-on-scroll">
+                    <h2 class="fade-in-on-scroll">ABOUT US</h2>
+                    <h3 class="fade-in-on-scroll">配送力 × サービス品質で唯一無二の存在へ</h3>
+                    <p class="fade-in-on-scroll">Move Itは、迅速かつ確実な配送を通じて、お客様の信頼と満足を第一に考え、
+                        日々の暮らしに大きな価値をお届けしています。<br>お客様視点に立ち、
+                        最適な物流ソリューションでビジネスと生活を支え続けます。</p>
+                </div>
             </div>
         </section>
 
-        <section class="faq">
+        <section id="requirements" class="requirements">
+            <span class="decoration fade-in-on-scroll">DRIVERS</span>
+            <div class="requirements-wrapper">
+                <div class="requirements-label fade-in-on-scroll">
+                    <h2>求めるのはこんな方</h2>
+                    <p class="description">Move Itはこんな方を求めています</p>
+                </div>
+
+                <div class="together">
+                    <div class="left-index fade-in-on-scroll">
+                        <a href="#item1" id="nav1">
+                            <img src="https://oceans-driver.co.jp/assets/images/top/workers1.png" alt="ドライバー未経験の方">
+                            <span>ドライバー未経験の方</span>
+                        </a>
+                        <a href="#item2" id="nav2">
+                            <img src="https://oceans-driver.co.jp/assets/images/top/workers2.png" alt="配送ドライバーの方">
+                            <span>現役配送ドライバーの方</span>
+                        </a>
+                    </div>
+
+                    <div class="right-panel">
+                        <div class="item" id="item1">
+                            <h3 class="fade-in-on-scroll">ドライバー未経験の方</h3>
+                            <p class="description fade-in-on-scroll">「やったことないけど、大丈夫かな？」<br>そんな不安も、しっかりサポートします！</p>
+                            <p class="fade-in-on-scroll">軽トラックの配送に興味がある方や、「運送業界は初めてだけど挑戦してみたい」という方にピッタリなのが、Move Itのお仕事です！
+                                <br>なぜなら、当社の優しい先輩方の教育が充実しているから。ただ荷物を運ぶだけじゃなく、「どうしたらお客さまに喜んでもらえるか？」を基本から学べます。<br>未経験からでも、プロとして自信を持って働けるようになります！
+                                実際に、「配送は全く初めてだったけど、すぐに稼げるようになった！」というスタッフも。Move Itで、その夢を叶えてみませんか？
+                                <small>※年齢や経験は問いませんが、普通自動車免許（AT限定可）は必要です。</small>
+                            </p>
+                            <figure class="scrollin">
+                                <img class="fade-in-on-scroll"
+                                    src="https://oceans-driver.co.jp/assets/images/top/workersimg1.jpg" alt="ドライバー未経験の方">
+                            </figure>
+                        </div>
+                        <div class="item" id="item2">
+                            <h3 class="fade-in-on-scroll">配送ドライバーの方</h3>
+                            <p class="description fade-in-on-scroll">今の働き方にモヤモヤしていませんか？<br>Move Itで理想の働き方を見つけよう！</p>
+                            <p class="fade-in-on-scroll">
+                                現配送・輸送のお仕事をしている方、「月によって収入がバラバラ…」「忙しすぎて生活が厳しい…」なんて悩んでいませんか？
+                                Move
+                                Itのサービスドライバーなら、そんなお悩みを解決できるかもしれません。<br>大手企業向けの安定した配送がメインだから、需要が安定していて収入も安心。さらに、お客さま満足を追求するスタイルなので、働きがいもやりがいもバッチリです。<br>独立開業を目指す方へのサポートも充実！自分のペースで仕事を進められる環境で、長く安心して働けます。<br>
+                                Move Itは、いつだってあなたの新しいスタートを全力で応援します！</p>
+                            <figure class="scrollin">
+                                <img class="fade-in-on-scroll"
+                                    src="https://oceans-driver.co.jp/assets/images/top/workersimg2.jpg" alt="配送ドライバーの方">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="faq" class="faq">
             <span class="decoration fade-in-on-scroll">FAQ</span>
             <div class="faq-label fade-in-on-scroll">
                 <h2>よくある質問</h2>
@@ -50,10 +108,13 @@
                     <div class="content">
                         <div class="question-header">
                             <span>Q</span>
-                            <h3>業務委託とはなんですか？</h3>
+                            <h3>業務委託ってどんな働き方？</h3>
                         </div>
-                        <p>業務委託とは、運送会社や荷主からの業務を他の企業や個人に委託する契約のことです。業務受託を受けるドライバーは委託ドライバーとなり、運送会社の社員ではなく個人事業主となります。委託ドライバーには高報酬を追求したり、自分のペースで働けるなどのメリットがあります。
-                            <br>委託ドライバーになるには「軽貨物車両・駐車場の用意」「軽貨物運送業の開業届けを出す」「営業用の黒ナンバーを取得」などが必要ですが、オーシャンズではドライバーの皆様の開業をサポートしています。
+                        <p>業務委託とは、運送会社や荷主からの仕事を、他の企業や個人が請け負う契約のことです。この形で働くドライバーは「委託ドライバー」と呼ばれ、運送会社の社員ではなく、個人事業主として働きます。
+                            委託ドライバーの魅力は、高い報酬を目指せることや自分のペースで働けることにあります。<br>
+                            ただし、委託ドライバーとしてスタートするには、「軽貨物車両や駐車場の用意」「軽貨物運送業の開業届の提出」「営業用の黒ナンバーの取得」等の準備が必要です。Move
+                            Itでは、これらの手続きや準備をしっかりサポート！
+                            初めての方も安心してスタートできます。
                         </p>
                     </div>
                 </div>
@@ -66,10 +127,13 @@
                     <div class="content">
                         <div class="question-header">
                             <span>Q</span>
-                            <h3>業務委託とはなんですか？</h3>
+                            <h3>業務委託ってどんな働き方？</h3>
                         </div>
-                        <p>業務委託とは、運送会社や荷主からの業務を他の企業や個人に委託する契約のことです。業務受託を受けるドライバーは委託ドライバーとなり、運送会社の社員ではなく個人事業主となります。委託ドライバーには高報酬を追求したり、自分のペースで働けるなどのメリットがあります。
-                            <br>委託ドライバーになるには「軽貨物車両・駐車場の用意」「軽貨物運送業の開業届けを出す」「営業用の黒ナンバーを取得」などが必要ですが、オーシャンズではドライバーの皆様の開業をサポートしています。
+                        <p>業務委託とは、運送会社や荷主からの仕事を、他の企業や個人が請け負う契約のことです。この形で働くドライバーは「委託ドライバー」と呼ばれ、運送会社の社員ではなく、個人事業主として働きます。
+                            委託ドライバーの魅力は、高い報酬を目指せることや自分のペースで働けることにあります。<br>
+                            ただし、委託ドライバーとしてスタートするには、「軽貨物車両や駐車場の用意」「軽貨物運送業の開業届の提出」「営業用の黒ナンバーの取得」等の準備が必要です。Move
+                            Itでは、これらの手続きや準備をしっかりサポート！
+                            初めての方も安心してスタートできます。
                         </p>
                     </div>
                 </div>
@@ -77,14 +141,15 @@
 
         </section>
 
-        <section class="recruit">
+        <section id="recruit" class="recruit">
             <span class="decoration fade-in-on-scroll">RECRUIT</span>
             <div class="recruit-wrapper">
                 <div class="recruit-label fade-in-on-scroll">
                     <h2>募集要項</h2>
-                    <p class="description">Move Itは、一人でも多くのドライバーさんとともに<br>軽貨物サービスのNo.1企業を目指します</p>
-                    <p>株式会社Move
-                        Itは、2008年に『企業専属便お荷物配送.com』を起ち上げ、以来、当社ならではの効率的な配送ネットワークや、当社ならではの付加価値の高いサービスを提供することで、お客さまの期待を超える成果を出し続けています。今後もさらなる信頼性向上、成長・発展を目指し、軽貨物輸送業界の革新と発展に貢献してまいります。
+                    <p class="description">Move Itで、軽貨物サービスNo.1を一緒に目指しませんか？</p>
+                    <p>私たちMove
+                        Itは、独自の配送ネットワークと高品質なサービスを武器に、お客さまの期待を超える成果を追求しています。<br>これからも、より信頼される存在へ成長し、軽貨物輸送業界を盛り上げていきたいと考えています。「ただ荷物を運ぶだけ」じゃない、付加価値の高い配送を一緒に届けませんか？<br>あなたもMove
+                        Itの仲間になって、新しい未来を作りましょう！
                     </p>
                 </div>
                 <table class="recruit-table fade-in-on-scroll">
@@ -110,7 +175,7 @@
                         </tr>
                         <tr>
                             <th>勤務地</th>
-                            <td>東京都・大阪府</td>
+                            <td>東京都</td>
                         </tr>
                         <tr>
                             <th>仕事内容</th>
@@ -124,9 +189,9 @@
                         </tr>
                         <tr>
                             <th>勤務時間</th>
-                            <td>一例　9：00～18：00<br>
+                            <td>一例 9:00～18:00<br>
                                 1日4時間～OK！業務委託なので、ご自身の都合や希望の収入に合わせて、ご自身で勤務時間などを決められます。<br>
-                                ※直行直帰案件あり　<br class="sp">※車通勤OK</td>
+                                ※直行直帰案件あり<br>※車通勤OK</td>
                         </tr>
                         <tr>
                             <th>休日・休暇</th>
@@ -142,6 +207,65 @@
                     </tfoot>
                 </table>
             </div>
+
+            <div class="company-wrapper">
+                <div class="company-label fade-in-on-scroll">
+                    <h2>会社概要</h2>
+                </div>
+                <table class="company-table fade-in-on-scroll">
+                    <thead class="company-thead">
+                        <tr>
+                            <th></th>
+                            <td></td>
+                        </tr>
+                    </thead>
+                    <tbody class="company-tbody">
+                        <tr>
+                            <th>会社名</th>
+                            <td>株式会社Move It</td>
+                        </tr>
+                        <tr>
+                            <th>TEL</th>
+                            <td>03-1234-1234</td>
+                        </tr>
+                        <tr>
+                            <th>FAX</th>
+                            <td>03-4321-4321</td>
+                        </tr>
+                        <tr>
+                            <th>所在地</th>
+                            <td>〒131-0045 東京都墨田区押上一丁目1番2号</td>
+                        </tr>
+                        <tr>
+                            <th>事業内容</th>
+                            <td>軽貨物の運送業務</td>
+                        </tr>
+                        <tr>
+                            <th>代表取締役</th>
+                            <td>阿部匠吾</td>
+                        </tr>
+                        <tr>
+                            <th>会社設立</th>
+                            <td>2024年XX月XX日</td>
+                        </tr>
+                        <tr>
+                            <th>資本金</th>
+                            <td>100万円</td>
+                        </tr>
+                        <tr>
+                            <th>オフィス</th>
+                            <td>〒131-0045 東京都墨田区押上一丁目1番2号</td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="company-tfoot">
+                        <tr>
+                            <th></th>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
         </section>
 
     </main>
