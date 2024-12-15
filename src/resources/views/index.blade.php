@@ -11,13 +11,13 @@
         <!-- メインビジュアル -->
         <div class="mainvisual">
             <div class="text">
-                <p class="title">動く力で、すべて人を笑顔へ。<br>Delivering Smiles.</p>
+                <p class="title">動く力で、すべて人を笑顔へ。</p>
                 <a class="btn" href="#introduction">Move Itとは</a>
             </div>
             <ul class="fade">
-                <li><img src="images/mainvisual1.jpg" alt=""></li>
-                <li><img src="images/mainvisual2.jpg" alt=""></li>
-                <li><img src="images/mainvisual3.jpg" alt=""></li>
+                <li><img src="images/mainvisual1.png" alt=""></li>
+                {{-- <li><img src="images/mainvisual2.png" alt=""></li>
+                <li><img src="images/mainvisual3.png" alt=""></li> --}}
             </ul>
         </div>
 
@@ -208,7 +208,7 @@
                 </table>
             </div>
 
-            <div class="company-wrapper">
+            <div class="company-wrapper" id="company">
                 <div class="company-label fade-in-on-scroll">
                     <h2>会社概要</h2>
                 </div>

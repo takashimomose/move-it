@@ -41,17 +41,13 @@ html {
 
 .instagram-icon:hover {
     opacity: 0.7;
-    color: #fff;
 }
 
 /* 追従ボタンのスタイル */
 .floating-btn {
-    position: absolute;
-    /* 画面に固定 */
+    position: fixed;
     top: 0px;
-    /* 上から20px */
-    right: 0px;
-    /* 右から20px */
+    right: 20px;
     padding: 10px 20px;
     background-color: #FEE101;
     color: #000;
@@ -245,11 +241,12 @@ html {
     /* 追従ボタンのスタイル */
     .inquiry-icon {
         display: block;
-        position: absolute;
-        width: 15%;
+        position: fixed;
+        width: 70px;
+        height: 70px;
         top: 130px;
         right: 0px;
-        padding: 2.5%;
+        padding: 12px;
         background-color: #FEE101;
         color: #000;
         text-decoration: none;

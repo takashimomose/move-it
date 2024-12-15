@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic&display=swap"
         rel="stylesheet">
     <!-- 各ページで追加のCSSを読み込む -->
     @stack('css')
@@ -36,7 +36,7 @@
                         <li class="menu_item"><a href="#faq">よくある質問</a></li>
                     </ul>
                     <ul class="inquiry">
-                        <li class="menu_item"><a href="#">会社概要</a></li>
+                        <li class="menu_item"><a href="#company">会社概要</a></li>
                         <li class="menu_item"><a href="#recruit">募集要項</a></li>
                     </ul>
                 </nav>
