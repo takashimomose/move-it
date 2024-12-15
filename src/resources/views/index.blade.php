@@ -16,8 +16,8 @@
             </div>
             <ul class="fade">
                 <li><img src="images/mainvisual1.png" alt=""></li>
-                {{-- <li><img src="images/mainvisual2.png" alt=""></li>
-                <li><img src="images/mainvisual3.png" alt=""></li> --}}
+                <li><img src="images/mainvisual2.png" alt=""></li>
+                {{-- <li><img src="images/mainvisual3.png" alt=""></li> --}}
             </ul>
         </div>
 
