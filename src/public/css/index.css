@@ -141,7 +141,7 @@
     height: auto;
     /* アスペクト比を保つ */
     display: block;
-    border-radius: 8px;
+    border-radius: 20px;
     /* 角を少し丸める */
 }
 
