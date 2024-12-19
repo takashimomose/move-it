@@ -1,0 +1,84 @@
+
+/* .fade-in-on-scroll {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1s ease, transform 0.5s ease;
+}
+
+.fade-in-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+/* .decoration {
+    display: inline-block;
+    font-family: "Work Sans", sans-serif;
+    font-size: 6rem;
+    font-weight: 700;
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 1s ease-out;
+}
+
+.decoration.is-visible {
+    transform: translateX(0);
+    opacity: 0.03;
+} */
+
+/* 募集要項 */
+.ceo-wrapper {
+    width: calc(100% - 60px);
+    max-width: 1024px;
+    margin: 0 auto 40px auto;
+    align-items: center;
+}
+
+
+.ceo-label h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #08B355;
+    margin: 40px 0;
+}
+
+.ceo-label .description {
+    text-align: center;
+    font-size: 1.625rem;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.ceo-label p {
+    font-size: 1rem;
+    padding: 0 40px;
+    margin-bottom: 10px;
+}
+
+.ceo-label img {
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.signature {
+    margin-top: 30px;
+    text-align: right;
+}
+
+/* メディアクエリでレスポンシブ対応 */
+@media (max-width: 768px) {
+    .ceo-wrapper {
+        width: calc(100% - 50px);
+    }
+}
+
+/* メディアクエリでレスポンシブ対応 */
+@media (max-width: 480px) {
+    .decoration {
+        font-size: 2.5rem;
+        margin: 20px 0px 0px 28px;
+    }
+
+    .ceo-label p {
+        padding: 0;
+    }
+}

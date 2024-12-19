@@ -23,7 +23,7 @@
             <a href="#" class="instagram-icon"><img src="images/instagram.svg" alt=""></a>
             <a href="#" class="inquiry-icon"><img src="images/inquiry.svg" alt=""></a>
             <a href="#" class="floating-btn">お問い合わせ・ご応募</a>
-            <a href=""><img src="images/logo.svg" alt=""></a>
+            <a href="{{ route('index') }}"><img src="images/logo.svg" alt=""></a>
             {{-- <h1>Delivering Smiles.</h1> --}}
             {{-- <p>Delivering Smiles.</p> --}}
             <div class="toggle_btn">☰</div>
@@ -31,13 +31,14 @@
                 <button id="close_btn" class="close_btn">×</button>
                 <nav id="navi" class="nav-wrapper">
                     <ul class="menu">
-                        <li class="menu_item"><a href="#introduction">Move Itとは</a></li>
-                        <li class="menu_item"><a href="#requirements">求めるのはこんな方</a></li>
-                        <li class="menu_item"><a href="#faq">よくある質問</a></li>
+                        <li class="menu_item"><a href="{{ route('index') }}#introduction">MOVE ITとは</a></li>
+                        <li class="menu_item"><a href="{{ route('index') }}#requirements">求めるのはこんな方</a></li>
+                        <li class="menu_item"><a href="{{ route('index') }}#faq">よくある質問</a></li>
                     </ul>
                     <ul class="inquiry">
-                        <li class="menu_item"><a href="#company">会社概要</a></li>
-                        <li class="menu_item"><a href="#recruit">募集要項</a></li>
+                        <li class="menu_item"><a href="{{ route('show')  }}">代表挨拶</a></li>
+                        <li class="menu_item"><a href="{{ route('index') }}#company">会社概要</a></li>
+                        <li class="menu_item"><a href="{{ route('index') }}#recruit">募集要項</a></li>
                     </ul>
                 </nav>
             </div>
@@ -55,7 +56,7 @@
                 </ul>
             </li>
             <li class="item">
-                <p class="title">Move Itについて</p>
+                <p class="title">MOVE ITについて</p>
                 <ul class="footer-menu">
                     <li><a href="#">よくある質問</a></li>
                     <li><a href="#">プライバシーポリシー</a></li>
@@ -63,7 +64,7 @@
                 </ul>
             </li>
         </ul>
-        <p class="copyright">&copy; Move It</p>
+        <p class="copyright">&copy; MOVE IT</p>
     </footer>
 </body>
 

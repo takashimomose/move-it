@@ -19,3 +19,4 @@ Route::get('/', function () {
 });
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
+Route::get('/ceo', [IndexController::class, 'show'])->name('show');
