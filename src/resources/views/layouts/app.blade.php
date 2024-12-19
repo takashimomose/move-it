@@ -36,7 +36,7 @@
                         <li class="menu_item"><a href="{{ route('index') }}#faq">よくある質問</a></li>
                     </ul>
                     <ul class="inquiry">
-                        <li class="menu_item"><a href="{{ route('show')  }}">代表挨拶</a></li>
+                        <li class="menu_item"><a href="{{ route('show') }}">代表挨拶</a></li>
                         <li class="menu_item"><a href="{{ route('index') }}#company">会社概要</a></li>
                         <li class="menu_item"><a href="{{ route('index') }}#recruit">募集要項</a></li>
                     </ul>
@@ -64,6 +64,7 @@
                 </ul>
             </li>
         </ul>
+        <a href="#" class="pagetop" id="scrollToTopButton"><img src="images/arrow.svg" alt=""></a>
         <p class="copyright">&copy; MOVE IT</p>
     </footer>
 </body>
@@ -116,6 +117,32 @@
                     behavior: 'smooth' // スムーズスクロール
                 });
             }
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const scrollToTopButton = document.getElementById('scrollToTopButton');
+
+        // 初期状態で非表示
+        scrollToTopButton.style.display = 'none';
+
+        // ページをスクロールするとボタンを表示/非表示
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                scrollToTopButton.style.display = 'block';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+
+        // ボタンをクリックしたときに最上部までスムーズにスクロール
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         });
     });
 </script>
