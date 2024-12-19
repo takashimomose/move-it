@@ -3,7 +3,8 @@
     position: relative;
     width: 100%;
     height: 0;
-    padding-top: 40%; /* 9 / 16 * 100 = 56.25% */
+    padding-top: 40%;
+    /* 9 / 16 * 100 = 56.25% */
     overflow: hidden;
     background-color: #000;
 }
@@ -612,8 +613,12 @@
 
 /* メディアクエリでレスポンシブ対応 */
 @media (max-width: 480px) {
+    .mainvisual {
+        padding-top: 60%;
+    }
+
     .mainvisual .text .title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
     .introduction-wrapper {
