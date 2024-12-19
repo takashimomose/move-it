@@ -41,12 +41,31 @@
     margin: 40px 0;
 }
 
-.ceo-label .description {
+/* .ceo-label .description {
     text-align: center;
     font-size: 1.625rem;
     color: #000;
     margin-bottom: 20px;
-}
+} */
+
+.balloon {
+    position: relative;
+    background: #E5FFE5;
+    border-radius: 20px;
+    box-sizing: border-box;
+    border-color: #000;
+    padding: 40px;
+  }
+  
+  .balloon:before {
+    content: "";
+    position: absolute;
+    top: -43px;
+    left: 50%;
+    margin-left: -15px;
+    border: 15px solid transparent;
+    border-bottom: 30px solid #E5FFE5;
+  }
 
 .ceo-label p {
     font-size: 1rem;
