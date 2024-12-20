@@ -21,7 +21,7 @@
     <header id="header" class="header">
         <div class="header-wrapper">
             <a href="#" class="instagram-icon"><img src="images/instagram.svg" alt=""></a>
-            <a href="#" class="inquiry-icon"><img src="images/inquiry.svg" alt=""></a>
+            <a href="{{ route('contact.show') }}" class="inquiry-icon"><img src="images/inquiry.svg" alt=""></a>
             <a href="{{ route('contact.show') }}" class="floating-btn">お問い合わせ・ご応募</a>
             <a href="{{ route('index') }}"><img class="logo" src="images/logo.svg" alt=""></a>
             {{-- <h1>Delivering Smiles.</h1> --}}
@@ -74,16 +74,15 @@
             <li class="item">
                 <p class="title">会社情報</p>
                 <ul class="footer-menu">
-                    <li><a href="#">会社概要</a></li>
-                    <li><a href="#">採用情報</a></li>
+                    <li><a href="{{ route('index') }}#company">会社概要</a></li>
+                    <li><a href="{{ route('index') }}#recruit">募集要項</a></li>
                 </ul>
             </li>
             <li class="item">
                 <p class="title">MOVE ITについて</p>
                 <ul class="footer-menu">
-                    <li><a href="#">よくある質問</a></li>
-                    <li><a href="#">プライバシーポリシー</a></li>
-                    <li><a href="#">お問い合わせ</a></li>
+                    <li><a href="{{ route('index') }}#faq">よくある質問</a></li>
+                    <li><a href="{{ route('contact.show') }}">お問い合わせ・ご応募</a></li>
                 </ul>
             </li>
         </ul>
