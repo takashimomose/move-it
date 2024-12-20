@@ -22,10 +22,33 @@
         <div class="header-wrapper">
             <a href="#" class="instagram-icon"><img src="images/instagram.svg" alt=""></a>
             <a href="#" class="inquiry-icon"><img src="images/inquiry.svg" alt=""></a>
-            <a href="#" class="floating-btn">お問い合わせ・ご応募</a>
-            <a href="{{ route('index') }}"><img src="images/logo.svg" alt=""></a>
+            <a href="{{ route('contact.show') }}" class="floating-btn">お問い合わせ・ご応募</a>
+            <a href="{{ route('index') }}"><img class="logo" src="images/logo.svg" alt=""></a>
             {{-- <h1>Delivering Smiles.</h1> --}}
             {{-- <p>Delivering Smiles.</p> --}}
+            <div class="toggle_btn">☰</div>
+            <div id="mask">
+                <button id="close_btn" class="close_btn">×</button>
+                <nav id="navi" class="nav-wrapper">
+                    <ul class="menu">
+                        <li class="menu_item"><a href="{{ route('index') }}#introduction">MOVE ITとは</a></li>
+                        <li class="menu_item"><a href="{{ route('index') }}#requirements">求めるのはこんな方</a></li>
+                        <li class="menu_item"><a href="{{ route('index') }}#faq">よくある質問</a></li>
+                    </ul>
+                    <ul class="inquiry">
+                        <li class="menu_item"><a href="{{ route('show') }}">代表挨拶</a></li>
+                        <li class="menu_item"><a href="{{ route('index') }}#company">会社概要</a></li>
+                        <li class="menu_item"><a href="{{ route('index') }}#recruit">募集要項</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <header id="header" class="header-scrolled">
+        <div class="header-wrapper">
+            <a href="{{ route('index') }}" class="logo-text"><img src="images/logo_text.svg" alt=""></a>
+            <a href="#" class="instagram-icon"><img src="images/instagram.svg" alt=""></a>
             <div class="toggle_btn">☰</div>
             <div id="mask">
                 <button id="close_btn" class="close_btn">×</button>
@@ -73,14 +96,37 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const toggleBtn = document.querySelector('.toggle_btn');
+        const headerScrolled = document.querySelector('.header-scrolled');
+        const scrollThreshold = 50; // クラスを切り替えるスクロール量（px）
+
+        // 初期状態では header-scrolled を非表示
+        headerScrolled.style.visibility = 'hidden';
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > scrollThreshold) {
+                headerScrolled.style.visibility = 'visible'; // スクロールすると表示
+                headerScrolled.style.opacity = '1'; // フェードイン効果用（必要なら）
+            } else {
+                headerScrolled.style.visibility = 'hidden'; // 最上部では非表示
+                headerScrolled.style.opacity = '0'; // フェードアウト効果用（必要なら）
+            }
+        });
+    });
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleBtns = document.querySelectorAll('.toggle_btn'); // 全てのtoggle_btnを取得
         const mask = document.getElementById('mask');
         const closeBtn = document.getElementById('close_btn');
         const menuItems = document.querySelectorAll('.menu_item'); // メニューアイテムを選択
 
         // ハンバーガーメニューを開く
-        toggleBtn.addEventListener('click', function() {
-            mask.classList.add('open');
+        toggleBtns.forEach(function(toggleBtn) {
+            toggleBtn.addEventListener('click', function() {
+                mask.classList.add('open');
+            });
         });
 
         // 閉じるボタンを押すと閉じる
