@@ -20,8 +20,10 @@ Route::get('/', function () {
 });
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
-Route::get('/ceo', [IndexController::class, 'show'])->name('show');
-Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
+Route::get('/ceo', [IndexController::class, 'show'])->name('show');
+
+Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
+Route::post('/contact', [ContactController::class, 'confirm'])->name('contact.confirm');
 Route::get('/contact/confirm', [ContactController::class, 'show'])->name('contact.confirm.show');
+Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');

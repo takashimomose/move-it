@@ -11,53 +11,53 @@
         <section class="contact">
             <div class="contact-confirm-wrapper">
                 {{-- <div class="contact-confirm-label"> --}}
-                    <h2>入力内容確認</h2>
-                    <p>以下の内容で送信します。よろしければ「送信」ボタンを押してください。</p>
-                    <form action="" method="POST">
+                <h2>入力内容確認</h2>
+                <p>以下の内容で送信します。よろしければ「送信」ボタンを押してください。</p>
+                <form action="{{ route('contact.send') }}" method="POST">
                     @csrf
                     <table>
                         <tr>
-                            <th class="confirm-label">項目</th>
-                            <th>内容</th>
-                        </tr>
-                        <tr>
                             <td class="confirm-label">お名前</td>
-                            <td>{{ $name }}</td>
+                            <td>{{ $contactData['name'] }}</td>
+                            <input type="hidden" name="name" value="{{ $contactData['name'] }}">
                         </tr>
                         <tr>
                             <td class="confirm-label">フリガナ</td>
-                            <td>{{ $nameKana }}</td>
+                            <td>{{ $contactData['name_kana'] }}</td>
+                            <input type="hidden" name="name_kana" value="{{ $contactData['name_kana'] }}">
                         </tr>
                         <tr>
                             <td class="confirm-label">郵便番号</td>
-                            <td>{{ $postalCode }}</td>
+                            <td>{{ $contactData['postal_code'] }}</td>
+                            <input type="hidden" name="postal_code" value="{{ $contactData['postal_code'] }}">
                         </tr>
                         <tr>
                             <td class="confirm-label">住所</td>
-                            <td>{{ $address }}</td>
+                            <td>{{ $contactData['address'] }}</td>
+                            <input type="hidden" name="address" value="{{ $contactData['address'] }}">
                         </tr>
                         <tr>
                             <td class="confirm-label">電話番号</td>
-                            <td>{{ $tel }}</td>
+                            <td>{{ $contactData['tel'] }}</td>
+                            <input type="hidden" name="tel" value="{{ $contactData['tel'] }}">
                         </tr>
                         <tr>
                             <td class="confirm-label">メールアドレス</td>
-                            <td>{{ $email }}</td>
+                            <td>{{ $contactData['email'] }}</td>
+                            <input type="hidden" name="email" value="{{ $contactData['email'] }}">
                         </tr>
                         <tr>
                             <td class="confirm-label">お問い合わせ内容</td>
-                            <td>{{ $message }}</td>
+                            <td>{{ $contactData['message'] }}</td>
+                            <input type="hidden" name="message" value="{{ $contactData['message'] }}">
                         </tr>
                     </table>
 
                     <div class="form-buttons">
-                        <form action="" method="post">
-                            @csrf
-                            <button class="edit-btn" type="submit" name="action" value="edit">修正する</button>
-                            <button class="primary-btn" type="submit" name="action" value="submit">送信する</button>
-                        </form>
+                        {{-- <button class="edit-btn" type="submit" name="action" value="edit">修正する</button> --}}
+                        <button class="primary-btn" type="submit" name="action" value="submit">送信する</button>
                     </div>
-                {{-- </div> --}}
+                </form>
             </div>
         </section>
     </main>

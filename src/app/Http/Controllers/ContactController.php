@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use App\Http\Requests\ContactRequest;
+use App\Mail\ContactMail;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -11,22 +15,25 @@ class ContactController extends Controller
         return view('contact');
     }
 
-    public function store(ContactRequest $request)
+    public function confirm(ContactRequest $request)
     {
         // 必要なデータを取得
+
         $contactData = $request->only('name', 'name_kana', 'postal_code', 'address', 'tel', 'email', 'message');
 
-        // 配列の各要素を個別の変数に分解
-        $name = $contactData['name'];
-        $nameKana = $contactData['name_kana'];
-        $postalCode = $contactData['postal_code'];
-        $address = $contactData['address'];
-        $tel = $contactData['tel'];
-        $email = $contactData['email'];
-        $message = $contactData['message'];
+        // compactに配列のキーをそのまま渡す
+        return view('contact-confirm', compact('contactData'));
+    }
 
-        // dd($contactData);
+    public function send(Request $request)
+    {
+        $contactData = $request->only('name', 'name_kana', 'postal_code', 'address', 'tel', 'email', 'message');
 
-        return view('contact-confirm', compact('name', 'nameKana', 'postalCode', 'address', 'tel', 'email', 'message'));
+        // 現在の日時を取得
+        $contactData['send_date'] = Carbon::now()->format('Y年m月d日 H:i:s');
+        // メールを送信
+        Mail::to(env('ADMIN_EMAIL'))->send(new ContactMail($contactData));
+
+        return redirect()->route('index');
     }
 }
