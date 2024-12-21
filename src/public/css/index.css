@@ -367,9 +367,12 @@
     margin-bottom: 10px;
 }
 
-.item {
+/* .item {
     margin-bottom: 20px;
-    /* アイテム間のスペース */
+} */
+
+.scrollin img {
+    margin-bottom: 20px;
 }
 
 .item h3 {

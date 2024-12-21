@@ -135,6 +135,7 @@ html {
     max-width: 1000px;
     padding: 0 16px;
     margin: 0 auto;
+    margin-bottom: 20px;
 }
 
 .title {
