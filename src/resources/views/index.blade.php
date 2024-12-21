@@ -322,7 +322,7 @@
                     const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
                     // 要素が画面の80%の位置に来たら表示
-                    if (rect.top <= windowHeight * 0.8) {
+                    if (rect.top <= windowHeight * 0.9) {
                         element.classList.add('is-visible');
                     }
                 });
