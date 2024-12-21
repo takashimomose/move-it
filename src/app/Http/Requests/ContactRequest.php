@@ -24,6 +24,8 @@ class ContactRequest extends FormRequest
         return [
             'name' => ['required', 'max:255'],
             'name_kana' => ['required', 'max:255'],
+            'postal_code' => ['required'],
+            'address' => ['required'],
             'tel' => ['required', 'max:255'],
             'email' => ['required', 'email', 'max:255'],
             'message' => ['required', 'max:255'],
@@ -37,6 +39,8 @@ class ContactRequest extends FormRequest
             'name_kana.required' => 'フリガナを入力してください',
             'name.max' => 'お名前は:max文字以内で入力してください',
             'name_kana.max' => 'フリガナは:max文字以内で入力してください',
+            'postal_code.required' => '郵便番号を入力してください',
+            'address.required' => '住所を入力してください',
             'tel.required' => '電話番号を入力してください',
             'tel.max' => '電話番号は:max文字以内で入力してください',
             'email.required' => 'メールアドレスを入力してください',

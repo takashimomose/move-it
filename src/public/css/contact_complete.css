@@ -1,0 +1,55 @@
+.contact-complete-wrapper {
+    width: calc(100% - 60px);
+    max-width: 768px;
+    margin: 0 auto 40px auto;
+    align-items: center;
+}
+
+
+.contact-complete-label h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #08B355;
+    margin: 40px 0;
+}
+
+.contact-complete-label p {
+    text-align:center;
+    font-size: 1rem;
+    padding: 0 40px;
+    margin-bottom: 10px;
+}
+
+.contact-complete-label a {
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px;
+    background-color: #fee101;
+    border-radius: 40px;
+    font-weight: 700;
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 45%;
+}
+
+/* メディアクエリでレスポンシブ対応 */
+@media (max-width: 768px) {
+    .contact-complete-wrapper {
+        width: calc(100% - 50px);
+    }
+
+    .inquiry-icon {
+        display: none;
+    }
+}
+
+/* メディアクエリでレスポンシブ対応 */
+@media (max-width: 480px) {
+    .contact-complete-label p {
+        padding: 0;
+    }
+
+    .inquiry-icon {
+        display: none;
+    }
+}

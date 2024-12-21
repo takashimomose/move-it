@@ -15,15 +15,15 @@ use App\Http\Controllers\IndexController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/', [IndexController::class, 'index'])->name('index');
 
-Route::get('/ceo', [IndexController::class, 'show'])->name('show');
+Route::get('/ceo', [IndexController::class, 'show'])->name('ceo.show');
 
 Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
-Route::post('/contact', [ContactController::class, 'confirm'])->name('contact.confirm');
-Route::get('/contact/confirm', [ContactController::class, 'show'])->name('contact.confirm.show');
+Route::post('/contact/confirm', [ContactController::class, 'confirm'])->name('contact.confirm');
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
+Route::get('/contact/complete', [ContactController::class, 'complete'])->name('contact.complete');

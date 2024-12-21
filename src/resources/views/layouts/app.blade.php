@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title', 'Contact Form')</title> <!-- 各ページで異なるタイトルを指定可能 -->
     <link rel="stylesheet" href="{{ asset('css/sanitize.css') }}" />
@@ -20,10 +20,11 @@
 <body>
     <header id="header" class="header">
         <div class="header-wrapper">
-            <a href="#" class="instagram-icon"><img src="images/instagram.svg" alt=""></a>
-            <a href="{{ route('contact.show') }}" class="inquiry-icon"><img src="images/inquiry.svg" alt=""></a>
+            <a href="#" class="instagram-icon"><img src="{{ asset('images/instagram.svg') }}" alt=""></a>
+            <a href="{{ route('contact.show') }}" class="inquiry-icon"><img src="{{ asset('images/inquiry.svg') }}"
+                    alt=""></a>
             <a href="{{ route('contact.show') }}" class="floating-btn">お問い合わせ・ご応募</a>
-            <a href="{{ route('index') }}"><img class="logo" src="images/logo.svg" alt=""></a>
+            <a href="{{ route('index') }}"><img class="logo" src="{{ asset('images/logo.svg') }}" alt=""></a>
             {{-- <h1>Delivering Smiles.</h1> --}}
             {{-- <p>Delivering Smiles.</p> --}}
             <div class="toggle_btn">☰</div>
@@ -36,7 +37,7 @@
                         <li class="menu_item"><a href="{{ route('index') }}#faq">よくある質問</a></li>
                     </ul>
                     <ul class="inquiry">
-                        <li class="menu_item"><a href="{{ route('show') }}">代表挨拶</a></li>
+                        <li class="menu_item"><a href="{{ route('ceo.show') }}">代表挨拶</a></li>
                         <li class="menu_item"><a href="{{ route('index') }}#company">会社概要</a></li>
                         <li class="menu_item"><a href="{{ route('index') }}#recruit">募集要項</a></li>
                     </ul>
@@ -47,8 +48,9 @@
 
     <header id="header" class="header-scrolled">
         <div class="header-wrapper">
-            <a href="{{ route('index') }}" class="logo-text"><img src="images/logo_02.svg" alt=""></a>
-            <a href="#" class="instagram-icon"><img src="images/instagram.svg" alt=""></a>
+            <a href="{{ route('index') }}" class="logo-text"><img src="{{ asset('images/logo_02.svg') }}"
+                    alt=""></a>
+            <a href="#" class="instagram-icon"><img src="{{ asset('images/instagram.svg') }}" alt=""></a>
             <div class="toggle_btn">☰</div>
             <div id="mask">
                 <button id="close_btn" class="close_btn">×</button>
@@ -59,7 +61,7 @@
                         <li class="menu_item"><a href="{{ route('index') }}#faq">よくある質問</a></li>
                     </ul>
                     <ul class="inquiry">
-                        <li class="menu_item"><a href="{{ route('show') }}">代表挨拶</a></li>
+                        <li class="menu_item"><a href="{{ route('ceo.show') }}">代表挨拶</a></li>
                         <li class="menu_item"><a href="{{ route('index') }}#company">会社概要</a></li>
                         <li class="menu_item"><a href="{{ route('index') }}#recruit">募集要項</a></li>
                     </ul>

@@ -3,7 +3,7 @@
 @section('title', '入力内容確認')
 
 @push('css')
-    <link rel="stylesheet" href="{{ asset('css/contact-confirm.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/contact_confirm.css') }}">
 @endpush
 
 @section('content')
