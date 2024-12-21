@@ -22,7 +22,7 @@ class ContactController extends Controller
         $contactData = $request->only('name', 'name_kana', 'postal_code', 'address', 'tel', 'email', 'message');
 
         // compactに配列のキーをそのまま渡す
-        return view('contact-confirm', compact('contactData'));
+        return view('contact_confirm', compact('contactData'));
     }
 
     public function send(Request $request)
@@ -34,6 +34,11 @@ class ContactController extends Controller
         // メールを送信
         Mail::to(env('ADMIN_EMAIL'))->send(new ContactMail($contactData));
 
-        return redirect()->route('index');
+        return redirect()->route('contact.complete');
+    }
+
+    public function complete()
+    {
+        return view('contact_complete');
     }
 }

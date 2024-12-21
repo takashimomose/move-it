@@ -42,7 +42,7 @@
                         </div>
                         <div class="form-group">
                             <label for="address" class="form-label">住所</label>
-                            <input class="form-input" type="text" id="address" name="address" placeholder="例：東京都新宿区西新宿2丁目8番地1号ムーブイットハイツ303号室"
+                            <input class="form-input" type="text" id="address" name="address" placeholder="例：東京都新宿区西新宿2丁目8番地1号"
                                 value="{{ old('address') }}">
                             @error('address')
                                 <div class="error-message">{{ $message }}</div>

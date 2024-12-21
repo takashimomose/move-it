@@ -14,7 +14,7 @@
     <p>住所: {{ $contactData['address'] }}</p>
     <p>電話番号: {{ $contactData['tel'] }}</p>
     <p>メールアドレス: {{ $contactData['email'] }}</p>
-    <p>メッセージ:</p>
+    <p>お問い合わせ内容:</p>
     <p>{{ $contactData['message'] }}</p>
     <p>※本メールはMOVE ITのお問い合わせフォームから送信されました。</p>
 </body>
