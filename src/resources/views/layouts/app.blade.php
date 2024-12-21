@@ -47,7 +47,7 @@
 
     <header id="header" class="header-scrolled">
         <div class="header-wrapper">
-            <a href="{{ route('index') }}" class="logo-text"><img src="images/logo_text.svg" alt=""></a>
+            <a href="{{ route('index') }}" class="logo-text"><img src="images/logo_02.svg" alt=""></a>
             <a href="#" class="instagram-icon"><img src="images/instagram.svg" alt=""></a>
             <div class="toggle_btn">☰</div>
             <div id="mask">
