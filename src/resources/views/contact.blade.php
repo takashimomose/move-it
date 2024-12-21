@@ -13,7 +13,7 @@
                 <div class="contact-label">
                     <h2>お問い合わせ・ご応募</h2>
                     <p class="description">お仕事についてのご質問やご応募をお問い合わせください。</p>
-                    <form action="{{ route('contact.store') }}" method="POST">
+                    <form action="{{ route('contact.confirm') }}" method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="name" class="form-label">お名前</label>
@@ -42,7 +42,7 @@
                         </div>
                         <div class="form-group">
                             <label for="address" class="form-label">住所</label>
-                            <input class="form-input" type="text" id="address" name="address" placeholder="市区町村・番地・マンション名等"
+                            <input class="form-input" type="text" id="address" name="address" placeholder="例：東京都新宿区西新宿2丁目8番地1号ムーブイットハイツ303号室"
                                 value="{{ old('address') }}">
                             @error('address')
                                 <div class="error-message">{{ $message }}</div>

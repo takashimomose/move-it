@@ -47,7 +47,7 @@ td {
 }
 
 .confirm-label {
-    width: 150px;
+    width: 30%;
     font-weight: 700;
 }
 
@@ -57,7 +57,7 @@ td {
 }
 
 .edit-btn {
-    width: 40%;
+    width: 45%;
     padding: 10px;
     color: #fff;
     background-color: #08B355;
@@ -75,7 +75,7 @@ td {
 }
 
 .primary-btn {
-    width: 40%;
+    width: 45%;
     padding: 10px;
     color: #000;
     background-color: #FEE101;
@@ -89,6 +89,10 @@ td {
 .primary-btn:hover {
     opacity: 0.7;
     color: #fff;
+}
+
+.inquiry-icon {
+    display: none;
 }
 
 /* メディアクエリでレスポンシブ対応 */
