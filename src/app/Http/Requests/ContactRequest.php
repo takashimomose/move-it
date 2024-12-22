@@ -24,8 +24,9 @@ class ContactRequest extends FormRequest
         return [
             'name' => ['required', 'max:255'],
             'name_kana' => ['required', 'max:255', 'regex:/^[ァ-ンヴー]+$/'],
+            'postal_code' => ['min:8'],
             'address' => ['max:255'],
-            'tel' => ['required', 'max:255'],
+            'tel' => ['required', 'min:10'],
             'email' => ['required', 'email', 'max:255'],
             'message' => ['required', 'max:1000'],
             'privacy_policy' => ['required'],
@@ -36,13 +37,14 @@ class ContactRequest extends FormRequest
     {
         return [
             'name.required' => 'お名前を入力してください',
-            'name_kana.required' => 'フリガナを入力してください',
-            'name_kana.regex' => 'フリガナはカタカナで入力してください',
             'name.max' => 'お名前は:max文字以内で入力してください',
+            'name_kana.required' => 'フリガナを入力してください',
             'name_kana.max' => 'フリガナは:max文字以内で入力してください',
+            'name_kana.regex' => 'フリガナはカタカナで入力してください',
+            'postal_code.min' => '郵便番号はハイフンを含めた半角数字:min桁で入力してください',
             'address.max' => '住所は:max文字以内で入力してください',
             'tel.required' => '電話番号を入力してください',
-            'tel.max' => '電話番号は:max文字以内で入力してください',
+            'tel.min' => '電話番号は半角数字:min桁以上で入力してください',
             'email.required' => 'メールアドレスを入力してください',
             'email.email' => 'メールアドレスの形式で入力してください',
             'email.max' => 'メールアドレスは:max文字以内で入力してください',
