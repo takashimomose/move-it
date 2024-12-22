@@ -32,6 +32,13 @@
     margin-top: 30px;
 }
 
+.form-label span {
+    margin-left: 10px;
+    color: red;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
 .form-input {
     width: 100%;
     padding: 10px;
@@ -70,6 +77,15 @@ textarea {
     /* プライバシーポリシーの内容に合わせてスタイル調整 */
     font-size: 14px;
     line-height: 1.6;
+}
+
+.privacy-policy ul {
+    list-style-type: disc; /* 「・」を表示 */
+    padding-left: 20px; /* 文字と「・」の間に余白を追加 */
+}
+
+.privacy-policy p {
+    margin: 10px 0;
 }
 
 .form-check {

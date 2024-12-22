@@ -16,7 +16,7 @@
                     <form action="{{ route('contact.confirm') }}" method="POST" novalidate>
                         @csrf
                         <div class="form-group">
-                            <label for="name" class="form-label">お名前</label>
+                            <label for="name" class="form-label">お名前<span>※必須</span></label>
                             <input class="form-input" type="text" id="name" name="name" placeholder="例：山田太郎"
                                 value="{{ old('name', $contactData['name'] ?? '') }}">
                             @error('name')
@@ -24,7 +24,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="name_kana" class="form-label">フリガナ</label>
+                            <label for="name_kana" class="form-label">フリガナ<span>※必須</span></label>
                             <input class="form-input" type="text" id="name_kana" name="name_kana" placeholder="例：ヤマダタロウ"
                                 value="{{ old('name_kana', $contactData['name_kana'] ?? '') }}">
                             @error('name_kana')
@@ -43,22 +43,24 @@
                         <div class="form-group">
                             <label for="address" class="form-label">住所</label>
                             <input class="form-input" type="text" id="address" name="address"
-                                placeholder="例：東京都新宿区西新宿2丁目8番地1号" value="{{ old('address', $contactData['address'] ?? '') }}">
+                                placeholder="例：東京都新宿区西新宿2丁目8番地1号"
+                                value="{{ old('address', $contactData['address'] ?? '') }}">
                             @error('address')
                                 <div class="error-message">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="tel" class="form-label">電話番号</label>
+                            <label for="tel" class="form-label">電話番号<span>※必須</span></label>
                             <input class="form-input" type="tel" id="tel" name="tel" pattern="[0-9]*"
-                                minlength= "10" maxlength="11" placeholder="例：09012345678" value="{{ old('tel', $contactData['tel'] ?? '') }}"
+                                maxlength="11" placeholder="例：09012345678"
+                                value="{{ old('tel', $contactData['tel'] ?? '') }}"
                                 oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                             @error('tel')
                                 <div class="error-message">{{ $message }}</div>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="email" class="form-label">メールアドレス</label>
+                            <label for="email" class="form-label">メールアドレス<span>※必須</span></label>
                             <input class="form-input" type="email" id="email" name="email"
                                 placeholder="例：moveit@example.com" value="{{ old('email', $contactData['email'] ?? '') }}">
                             @error('email')
@@ -66,7 +68,7 @@
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="message" class="form-label">お問い合わせ・ご応募内容</label>
+                            <label for="message" class="form-label">お問い合わせ・ご応募内容<span>※必須</span></label>
                             <textarea class="form-textarea" id="message" name="message" placeholder="">{{ old('message', $contactData['message'] ?? '') }}</textarea>
                             @error('message')
                                 <div class="error-message">{{ $message }}</div>
@@ -84,16 +86,18 @@
                                         <li>お客様に最適なサービスを提供するためのご連絡。</li>
                                         <li>お客様からの質問に対する回答や確認のご連絡。</li>
                                     </ul>
-                                    <p>収集した個人情報は、お客様の同意なく、記載した目的以外では使用いたしません。</p>
-                                    <p>情報の漏洩を防ぐために必要な対策を講じ、従業員及び委託先の管理にも注力します。</p>
-                                    <p>お客様の同意なしに、第三者へ情報を提供することはありません。</p>
-                                    <p>お客様が希望された場合、情報を開示いたします。</p>
-                                    <p>もし公開された情報に誤りがあった場合には、速やかに訂正または削除いたします。</p>
-                                    <p>個人情報に関する苦情には、迅速かつ適切に対応いたします。</p>
+                                    <p>収集した個人情報は、お客様の同意なく、記載した目的以外では使用いたしません。<br>
+                                        情報の漏洩を防ぐために必要な対策を講じ、従業員及び委託先の管理にも注力します。<br>
+                                        お客様の同意なしに、第三者へ情報を提供することはありません。<br>
+                                        お客様が希望された場合、情報を開示いたします。<br>
+                                        もし公開された情報に誤りがあった場合には、速やかに訂正または削除いたします。<br>
+                                        個人情報に関する苦情には、迅速かつ適切に対応いたします。
+                                    </p>
                                 </div>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="privacy_policy" value="1" {{ old('privacy_policy') ? 'checked' : '' }}>
+                                <input class="form-check-input" type="checkbox" name="privacy_policy" value="1"
+                                    {{ old('privacy_policy') ? 'checked' : '' }}>
                                 <label class="form-check-label">プライバシーポリシーに同意する</label>
                                 @error('privacy_policy')
                                     <div class="error-message">{{ $message }}</div>

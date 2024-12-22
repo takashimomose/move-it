@@ -24,7 +24,7 @@ class ContactController extends Controller
     {
         // 必要なデータを取得
 
-        $contactData = $request->only('name', 'name_kana', 'postal_code', 'address', 'tel', 'email', 'message');
+        $contactData = $request->all();
 
         // Sessionにデータを保存
         Session::put('contact_data', $contactData);
@@ -35,12 +35,12 @@ class ContactController extends Controller
 
     public function send(Request $request)
     {
-        $contactData = $request->only('name', 'name_kana', 'postal_code', 'address', 'tel', 'email', 'message');
+        $contactData = $request->all();
 
-        dd($contactData);
         // 現在の日時を取得
         $contactData['send_date'] = Carbon::now()->format('Y年m月d日 H:i:s');
         // メールを送信
+        
         Mail::to(env('ADMIN_EMAIL'))->send(new ContactMail($contactData));
 
         return redirect()->route('contact.complete');
