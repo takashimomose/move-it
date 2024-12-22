@@ -19,11 +19,13 @@ use App\Http\Controllers\IndexController;
 //     return view('welcome');
 // });
 
-Route::get('/', [IndexController::class, 'index'])->name('index');
-
-Route::get('/ceo', [IndexController::class, 'show'])->name('ceo.show');
-
 Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
 Route::post('/contact/confirm', [ContactController::class, 'confirm'])->name('contact.confirm');
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
-Route::get('/contact/complete', [ContactController::class, 'complete'])->name('contact.complete');
+
+
+Route::middleware('clear_session_for_non_contact')->group(function () {
+    Route::get('/', [IndexController::class, 'index'])->name('index');
+    Route::get('/ceo', [IndexController::class, 'show'])->name('ceo.show');
+    Route::get('/contact/complete', [ContactController::class, 'complete'])->name('contact.complete');
+});

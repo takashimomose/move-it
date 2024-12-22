@@ -29,12 +29,12 @@
     margin-bottom: 5px;
     font-weight: 700;
     font-size: 1rem;
+    margin-top: 30px;
 }
 
 .form-input {
     width: 100%;
     padding: 10px;
-    margin-bottom: 30px;
     box-sizing: border-box;
     border: solid 1px #E2E5E8;
     border-radius: 5px;
@@ -48,7 +48,6 @@ input {
     width: 100%;
     height: 200px;
     padding: 10px;
-    margin-bottom: 30px;
     box-sizing: border-box;
     border: solid 1px #E2E5E8;
     border-radius: 5px;
@@ -56,6 +55,68 @@ input {
 
 textarea {
     font-family: sans-serif; /* システムのデフォルトフォントを使用 */
+}
+
+.privacy-policy-container {
+    max-height: 200px; /* スクロール可能な高さ */
+    overflow-y: auto;  /* 縦のスクロールを有効にする */
+    border: 1px solid #ccc; /* 枠線 */
+    padding: 10px; /* パディング */
+    margin-bottom: 10px; /* 下の余白 */
+    border-radius: 10px;
+}
+
+.privacy-policy {
+    /* プライバシーポリシーの内容に合わせてスタイル調整 */
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.form-check {
+    margin-top: 10px; /* チェックボックスの余白 */
+    text-align: center;
+}
+
+.form-check-input {
+    margin-right: 5px; /* チェックボックスとラベルの間隔 */
+}
+
+/* チェックボックスの基本スタイル */
+.form-check-input {
+    width: 30px; /* チェックボックスの幅 */
+    height: 30px; /* チェックボックスの高さ */
+    border: 1px solid #ccc; /* 枠線 */
+    border-radius: 4px; /* 角を丸く */
+    appearance: none; /* デフォルトのスタイルを無効化 */
+    position: relative;
+    cursor: pointer;
+}
+
+/* チェックボックスにチェックが入ったときのスタイル */
+.form-check-input:checked {
+    background-color: #08B355; /* チェックボックスの背景色 */
+    border-color: #08B355; /* 枠線の色 */
+}
+
+/* チェックマークの表示（擬似要素を使用） */
+.form-check-input:checked::before {
+    content: ''; /* 擬似要素として空の内容を追加 */
+    position: absolute;
+    top: 5px; /* チェックマークの位置調整 */
+    left: 9px; /* チェックマークの位置調整 */
+    width: 10px; /* チェックマークの幅 */
+    height: 15px; /* チェックマークの高さ */
+    border: solid white; /* チェックマークの色 */
+    border-width: 0 4px 4px 0; /* チェックマークの形状を作成 */
+    transform: rotate(45deg); /* チェックマークの回転 */
+}
+
+.form-check-input {
+    vertical-align: middle;            /* チェックボックスを中央揃え */
+}
+
+.form-check-label {
+    vertical-align: middle;            /* ラベルを中央揃え */
 }
 
 .primary-btn {
@@ -69,7 +130,8 @@ textarea {
     font-weight: 700;
     cursor: pointer;
     border-radius: 40px;
-    display: block
+    display: block;
+    margin-top: 30px;
 }
 
 .primary-btn:hover {
