@@ -54,7 +54,7 @@
                     </table>
 
                     <div class="form-buttons">
-                        {{-- <button class="edit-btn" type="submit" name="action" value="edit">修正する</button> --}}
+                        <a href="{{ route('contact.show') }}" class="edit-btn">修正する</a>
                         <button class="primary-btn" type="submit" name="action" value="submit">送信する</button>
                     </div>
                 </form>

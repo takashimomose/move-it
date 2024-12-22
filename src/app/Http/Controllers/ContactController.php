@@ -7,12 +7,17 @@ use App\Http\Requests\ContactRequest;
 use App\Mail\ContactMail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
 
 class ContactController extends Controller
 {
     public function show()
     {
-        return view('contact');
+        // セッションから保存された contact_data を取得
+        $contactData = Session::get('contact_data', []);
+
+        // viewにcontactDataを渡す
+        return view('contact', compact('contactData'));
     }
 
     public function confirm(ContactRequest $request)
@@ -20,6 +25,9 @@ class ContactController extends Controller
         // 必要なデータを取得
 
         $contactData = $request->only('name', 'name_kana', 'postal_code', 'address', 'tel', 'email', 'message');
+
+        // Sessionにデータを保存
+        Session::put('contact_data', $contactData);
 
         // compactに配列のキーをそのまま渡す
         return view('contact_confirm', compact('contactData'));
@@ -29,6 +37,7 @@ class ContactController extends Controller
     {
         $contactData = $request->only('name', 'name_kana', 'postal_code', 'address', 'tel', 'email', 'message');
 
+        dd($contactData);
         // 現在の日時を取得
         $contactData['send_date'] = Carbon::now()->format('Y年m月d日 H:i:s');
         // メールを送信
