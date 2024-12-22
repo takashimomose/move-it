@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '入力内容確認')
+@section('title', 'MOVE IT | ' . '入力内容確認')
 
 @push('css')
     <link rel="stylesheet" href="{{ asset('css/contact_confirm.css') }}">

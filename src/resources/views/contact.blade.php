@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'お問い合わせ・ご応募')
+@section('title', 'MOVE IT | ' . 'お問い合わせ・ご応募')
 
 @push('css')
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">

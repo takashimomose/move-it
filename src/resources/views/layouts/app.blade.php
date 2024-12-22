@@ -88,7 +88,7 @@
                 </ul>
             </li>
         </ul>
-        <a href="#" class="pagetop" id="scrollToTopButton"><img src="images/arrow.svg" alt=""></a>
+        <a href="#" class="pagetop" id="scrollToTopButton"><img src={{ asset('images/arrow.svg') }} alt=""></a>
         <p class="copyright">&copy; MOVE IT</p>
     </footer>
 </body>
