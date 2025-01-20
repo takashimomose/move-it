@@ -15,8 +15,8 @@
                 <a class="btn" href="#introduction">MOVE ITとは</a>
             </div>
             <ul class="fade">
-                <li><img src="images/mainvisual_01.png" alt=""></li>
-                {{-- <li><img src="images/mainvisual2.png" alt=""></li> --}}
+                <li><img src="images/mainvisual_02.png" alt=""></li>
+                {{-- <li><img src="images/mainvisual_02.png" alt=""></li> --}}
                 {{-- <li><img src="images/mainvisual3.png" alt=""></li> --}}
             </ul>
         </div>

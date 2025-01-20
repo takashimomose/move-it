@@ -41,7 +41,9 @@
 }
 
 .mainvisual .text .btn:hover {
-    filter: brightness(1.2);
+    /* filter: brightness(1.2); */
+    opacity: 0.7;
+    color: #fff;
 }
 
 /* 画像リスト */
@@ -70,8 +72,9 @@
 .mainvisual .fade li img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    filter: brightness(0.5);
+    object-fit: contain; /* 他にもcoverもある */
+    background-color: #99DADE;
+    /* filter: brightness(0.8); */
 }
 
 .mainvisual .fade li.active {
@@ -619,6 +622,7 @@
 
     .mainvisual .text .title {
         font-size: 1.4rem;
+        padding: 0;
     }
 
     .introduction-wrapper {
@@ -659,10 +663,6 @@
     .together {
         display: block;
     }
-
-    /* .requirements-wrapper {
-        display: block;
-    } */
 
     .left-index,
     .right-panel {

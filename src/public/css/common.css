@@ -15,7 +15,7 @@ html {
 
 /* Instagramボタンのスタイル */
 .instagram-icon {
-    display: block;
+    display: none; /* 表示はblock */
     position: absolute;
     width: 40px;
     height: 40px;
