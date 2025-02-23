@@ -32,7 +32,7 @@
 <body>
     <header id="header" class="header">
         <div class="header-wrapper">
-            <a href="#" class="instagram-icon"><img src="{{ asset('images/instagram.svg') }}" alt=""></a>
+            <a href="https://x.com/moveit2025" class="x-icon"><img src="{{ asset('images/x.svg') }}" alt=""></a>
             <a href="{{ route('contact.show') }}" class="inquiry-icon"><img src="{{ asset('images/inquiry.svg') }}"
                     alt=""></a>
             <a href="{{ route('contact.show') }}" class="floating-btn">お問い合わせ・ご応募</a>
@@ -61,8 +61,7 @@
     <header id="header" class="header-scrolled">
         <div class="header-wrapper">
             <a href="{{ route('index') }}" class="logo-text"><img src="{{ asset('images/logo_02.svg') }}"
-                    alt=""></a>
-            <a href="#" class="instagram-icon"><img src="{{ asset('images/instagram.svg') }}" alt=""></a>
+                    alt="logo"></a>
             <div class="toggle_btn">☰</div>
             <div id="mask">
                 <button id="close_btn" class="close_btn">×</button>
@@ -102,6 +101,8 @@
         </ul>
         <a href="#" class="pagetop" id="scrollToTopButton"><img src={{ asset('images/arrow.svg') }}
                 alt=""></a>
+        <a href="https://x.com/moveit2025" class="x-white"><img src={{ asset('images/x_white.svg') }}
+            alt=""></a>
         <p class="copyright">&copy; MOVE IT</p>
     </footer>
 </body>

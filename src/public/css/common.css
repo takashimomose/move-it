@@ -13,9 +13,10 @@ html {
     /* ボタンの基準位置を設定 */
 }
 
-/* Instagramボタンのスタイル */
-.instagram-icon {
-    display: none; /* 表示はblock */
+/* Xボタンのスタイル */
+.x-icon {
+    display: block;
+    /* 表示はblock */
     position: absolute;
     width: 40px;
     height: 40px;
@@ -32,7 +33,7 @@ html {
     transition: background-color 0.3s ease;
 }
 
-.instagram-icon img {
+.x-icon img {
     width: 100%;
     /* 親の幅内でアイコンをスケール */
     height: auto;
@@ -40,7 +41,7 @@ html {
     margin-bottom: 0px;
 }
 
-.instagram-icon:hover {
+.x-icon:hover {
     opacity: 0.7;
 }
 
@@ -153,6 +154,12 @@ html {
 .copyright {
     font-size: 16px;
     text-align: center;
+}
+
+.x-white {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
 }
 
 .toggle_btn,
@@ -338,7 +345,7 @@ html {
         left: 10px;
     }
 
-    .header-scrolled .header-wrapper .instagram-icon {
+    .header-scrolled .header-wrapper .x-icon {
         display: none;
     }
 }
