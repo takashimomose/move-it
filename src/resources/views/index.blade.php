@@ -29,9 +29,7 @@
                     <p class="description fade-in-on-scroll">動く力で、笑顔を届ける。</p>
                     <p class="fade-in-on-scroll">つなぐ、動く、届ける。そして人を笑顔へと導く。</p>
                     <p class="fade-in-on-scroll">私たちMOVE ITは、あらゆる企業課題に対して行動を起こし、動く力で、笑顔を未来へつなぎます。</p>
-                    <img class="introduction-image fade-in-on-scroll"
-                        src="/images/image_01.png"
-                        alt="">
+                    <img class="introduction-image fade-in-on-scroll" src="/images/image_01.png" alt="">
                 </div>
                 <div class="right-panel fade-in-on-scroll">
                     <h2 class="fade-in-on-scroll">ABOUT US</h2>
@@ -77,8 +75,7 @@
                             <small class="fade-in-on-scroll">※年齢や経験は問いませんが、普通自動車免許（AT限定可）は必要です。</small>
                             </p>
                             <figure class="scrollin">
-                                <img class="fade-in-on-scroll"
-                                    src="/images/image_02.png" alt="ドライバー未経験の方">
+                                <img class="fade-in-on-scroll" src="/images/image_02.png" alt="ドライバー未経験の方">
                             </figure>
                         </div>
                         <div class="item" id="item2">
@@ -93,8 +90,7 @@
                             <p class="fade-in-on-scroll">独立開業を目指す方へのサポートも充実！自分のペースで仕事を進められる環境で、長く安心して働けます。</p>
                             <p class="fade-in-on-scroll">MOVE ITは、いつだってあなたの新しいスタートを全力で応援します！</p>
                             <figure class="scrollin">
-                                <img class="fade-in-on-scroll"
-                                    src="/images/image_03.png" alt="配送ドライバーの方">
+                                <img class="fade-in-on-scroll" src="/images/image_03.png" alt="配送ドライバーの方">
                             </figure>
                         </div>
                     </div>
@@ -281,10 +277,14 @@
                     </tfoot>
                 </table>
             </div>
-
+            @include('components.campaign_modal')
         </section>
 
     </main>
+
+    @push('scripts')
+        <script src="{{ asset('js/campaign_modal.js') }}"></script>
+    @endpush
 
     <script>
         // メインビジュアル

@@ -118,6 +118,7 @@
                 alt=""></a>
         <p class="copyright">&copy; MOVE IT</p>
     </footer>
+    @stack('scripts')
 </body>
 
 </html>
@@ -141,7 +142,6 @@
         });
     });
 </script>
-
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
