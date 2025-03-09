@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'MOVE IT | ' . '動く力で、すべての人を笑顔へ。')
+@section('title', 'MOVE IT | ' . '動く力で、笑顔を届ける。')
 
 @push('css')
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">

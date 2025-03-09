@@ -14,6 +14,18 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&family=Zen+Maru+Gothic&display=swap"
         rel="stylesheet">
+    <meta property="og:title" content="MOVE IT | 動く力で、笑顔を届ける。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ asset('images/ogp-image.jpg') }}">
+    <meta property="og:description" content="動く力で、笑顔を届ける。">
+    <meta property="og:site_name" content="MOVE IT">
+    <meta property="og:locale" content="ja_JP">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@moveit2025">
+    <meta name="twitter:title" content="MOVE IT | 動く力で、笑顔を届ける。">
+    <meta name="twitter:description" content="動く力で、笑顔を届ける。">
+    <meta name="twitter:image" content="{{ asset('images/ogp-image-x.jpg') }}">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CM1MZJMRNM"></script>
     <script>
@@ -36,7 +48,8 @@
             <a href="{{ route('contact.show') }}" class="inquiry-icon"><img src="{{ asset('images/inquiry.svg') }}"
                     alt=""></a>
             <a href="{{ route('contact.show') }}" class="floating-btn">お問い合わせ・ご応募</a>
-            <a href="{{ route('index') }}"><img class="logo" src="{{ asset('images/logo.svg') }}" alt=""></a>
+            <a href="{{ route('index') }}"><img class="logo" src="{{ asset('images/logo.svg') }}"
+                    alt=""></a>
             {{-- <h1>Delivering Smiles.</h1> --}}
             {{-- <p>Delivering Smiles.</p> --}}
             <div class="toggle_btn">☰</div>
@@ -102,7 +115,7 @@
         <a href="#" class="pagetop" id="scrollToTopButton"><img src={{ asset('images/arrow.svg') }}
                 alt=""></a>
         <a href="https://x.com/moveit2025" class="x-white"><img src={{ asset('images/x_white.svg') }}
-            alt=""></a>
+                alt=""></a>
         <p class="copyright">&copy; MOVE IT</p>
     </footer>
 </body>
