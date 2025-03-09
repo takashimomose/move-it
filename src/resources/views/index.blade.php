@@ -11,7 +11,7 @@
         <!-- メインビジュアル -->
         <div class="mainvisual">
             <div class="text">
-                <p class="title">動く力で、すべての人を笑顔へ。</p>
+                <p class="title">動く力で、笑顔を届ける。</p>
                 <a class="btn" href="#introduction">MOVE ITとは</a>
             </div>
             <ul class="fade">
@@ -26,8 +26,8 @@
             <div class="introduction-wrapper">
                 <div class="left-panel">
                     <h1 class="fade-in-on-scroll">MOVE IT.</h1>
-                    <p class="description fade-in-on-scroll">動く力で、すべての人を笑顔へ。</p>
-                    <p class="fade-in-on-scroll">つなぐ、動く、届ける。そしてすべての人を笑顔へと導く。</p>
+                    <p class="description fade-in-on-scroll">動く力で、笑顔を届ける。</p>
+                    <p class="fade-in-on-scroll">つなぐ、動く、届ける。そして人を笑顔へと導く。</p>
                     <p class="fade-in-on-scroll">私たちMOVE ITは、あらゆる企業課題に対して行動を起こし、動く力で、笑顔を未来へつなぎます。</p>
                     <img class="introduction-image fade-in-on-scroll"
                         src="/images/image_01.png"
