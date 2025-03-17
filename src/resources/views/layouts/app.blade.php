@@ -21,7 +21,7 @@
     <meta property="og:description" content="動く力で、笑顔を届ける。">
     <meta property="og:site_name" content="MOVE IT">
     <meta property="og:locale" content="ja_JP">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@moveit2025">
     <meta name="twitter:title" content="MOVE IT | 動く力で、笑顔を届ける。">
     <meta name="twitter:description" content="動く力で、笑顔を届ける。">
