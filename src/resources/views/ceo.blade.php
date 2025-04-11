@@ -16,7 +16,7 @@
                     <div class="ceo-intro">
                         <img class="ceo-logo" src="{{ asset('images/logo.svg') }}" alt="ロゴ">
                         <div class="ceo-info">
-                            <p class="ceo-title">代表取締役</p>
+                            <p class="ceo-title">MOVE IT代表</p>
                             <p class="ceo-name">阿部 匠吾</p>
                         </div>
                     </div>
@@ -32,7 +32,7 @@
                         <p>働くにあたってどのような条件が必要か。エリアはどこがいいか。時間帯はどのくらいがいいか。など、細かな質問でも大丈夫ですので、お問い合わせください。</p>
                         <p>弊社は夢をもってこの業界で働かれている方を大歓迎しています！！私たちと一緒に、大きな夢を実現させていきましょう！！</p>
                         <div class="signature">
-                            <p>MOVE IT代表取締役</p>
+                            <p>MOVE IT代表</p>
                             <p>阿部匠吾</p>
                         </div>
                     </div>
