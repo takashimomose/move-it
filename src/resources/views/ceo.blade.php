@@ -3,7 +3,7 @@
 @section('title', 'MOVE IT | ' . '代表挨拶')
 
 @push('css')
-    <link rel="stylesheet" href="{{ asset('css/ceo.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ceo.css') }}?v={{ filemtime(public_path('css/ceo.css')) }}">
 @endpush
 
 @section('content')
