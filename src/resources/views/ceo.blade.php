@@ -11,7 +11,7 @@
         <section class="ceo">
             <div class="ceo-wrapper">
                 <div class="ceo-label fade-in-on-scroll">
-                    <h2>代表挨拶</h2>
+                    <h2>代表あいさつ</h2>
                     <img class="ceo-photo" src="{{ asset('images/ceo.jpg') }}" alt="CEO">
                     <div class="ceo-intro">
                         <img class="ceo-logo" src="{{ asset('images/logo.svg') }}" alt="ロゴ">
@@ -34,6 +34,11 @@
                         <div class="signature">
                             <p>MOVE IT代表</p>
                             <p>阿部匠吾</p>
+                        </div>
+                        <div class="ceo-note">
+                            <span class="ceo-note-message">代表の想いや日々の発信は、NOTEにて公開中！</span>
+                            <a href="https://note.com/moveit"><img class="note-logo"
+                                    src="{{ asset('images/note_logo.svg') }}" alt="noteロゴ"></a>
                         </div>
                     </div>
                 </div>

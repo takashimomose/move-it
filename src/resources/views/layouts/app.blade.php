@@ -62,7 +62,7 @@
                         <li class="menu_item"><a href="{{ route('index') }}#faq">よくある質問</a></li>
                     </ul>
                     <ul class="inquiry">
-                        <li class="menu_item"><a href="{{ route('ceo.show') }}">代表挨拶</a></li>
+                        <li class="menu_item"><a href="{{ route('ceo.show') }}">代表あいさつ</a></li>
                         <li class="menu_item"><a href="{{ route('index') }}#company">会社概要</a></li>
                         <li class="menu_item"><a href="{{ route('index') }}#recruit">募集要項</a></li>
                     </ul>
@@ -100,6 +100,7 @@
             <li class="item">
                 <p class="title">会社情報</p>
                 <ul class="footer-menu">
+                    <li><a href="{{ route('ceo.show') }}">代表あいさつ</a></li>
                     <li><a href="{{ route('index') }}#company">会社概要</a></li>
                     <li><a href="{{ route('index') }}#recruit">募集要項</a></li>
                 </ul>
