@@ -2,10 +2,8 @@
 .mainvisual {
     position: relative;
     width: 100%;
-    height: 0;
-    padding-top: 40%;
+    aspect-ratio: 1920 / 900;
     overflow: hidden;
-    background-color: #000;
 }
 
 /* テキスト部分 */
@@ -31,7 +29,7 @@
 .mainvisual .text .btn {
     display: inline-block;
     padding: 15px 30px;
-    background-color: #FEE101;
+    background-color: #fee101;
     color: #000;
     text-decoration: none;
     border-radius: 40px;
@@ -41,44 +39,67 @@
 }
 
 .mainvisual .text .btn:hover {
-    /* filter: brightness(1.2); */
+    filter: brightness(1.2);
     opacity: 0.7;
     color: #fff;
 }
 
 /* 画像リスト */
-.mainvisual .fade {
+.mainvisual ul.fade,
+.mainvisual ul.fade li,
+.mainvisual ul.fade li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    z-index: 1;
 }
 
-.mainvisual .fade li {
+/* 車のスタイル */
+.car-a {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+    bottom: 80%;
+    left: -200px; /* 画面外から開始 */
+    animation:  drive-a 10s ease-in-out infinite alternate;
+    z-index: 10;
 }
 
-.mainvisual .fade li img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* 他にもcoverもある */
-    background-color: #99DADE;
-    /* filter: brightness(0.8); */
+.car-a img {
+    width: 50px;
+    height: auto;
 }
 
-.mainvisual .fade li.active {
-    opacity: 1;
+.car-b {
+    position: absolute;
+    bottom: 0%;
+    right: -200px; /* 画面外から開始 */
+    animation:  drive-b 10s ease-in-out infinite alternate;
+    z-index: 10;
+}
+
+.car-b img {
+    width: 50px;
+    height: auto;
+}
+
+/* 車の動き */
+@keyframes drive-a {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 110%;
+    }
+}
+
+@keyframes drive-b {
+    0% {
+        right: -200px;
+    }
+    100% {
+        right: 110%;
+    }
 }
 
 /* イントロダクション */
@@ -108,7 +129,7 @@
 .introduction-wrapper .right-panel h3 {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #08B355;
+    color: #08b355;
     margin-bottom: 20px;
 }
 
@@ -196,7 +217,7 @@
 .faq-label h2 {
     text-align: center;
     font-size: 2rem;
-    color: #08B355;
+    color: #08b355;
     margin-bottom: 40px;
 }
 
@@ -222,7 +243,7 @@
 .container-left .left {
     width: 60%;
     /* 幅を調整 */
-    background-color: #F8F4E6;
+    background-color: #f8f4e6;
     /* 左側の背景色 */
     display: flex;
     /* Flexbox を適用 */
@@ -253,7 +274,7 @@
 .question-header span {
     display: inline-block;
     font-size: 48px;
-    color: #08B355;
+    color: #08b355;
     font-weight: bold;
 }
 
@@ -285,7 +306,7 @@
 .container-right .right {
     width: 60%;
     /* 幅を調整 */
-    background-color: #F0F6FA;
+    background-color: #f0f6fa;
     /* 背景色 */
     display: flex;
     /* Flexbox を適用 */
@@ -318,7 +339,7 @@
 .requirements-label h2 {
     text-align: center;
     font-size: 2rem;
-    color: #08B355;
+    color: #08b355;
     margin-bottom: 40px;
 }
 
@@ -389,7 +410,7 @@
 .item .description {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #08B355;
+    color: #08b355;
 }
 
 .scrollin img {
@@ -398,8 +419,6 @@
     max-width: 100%;
     border-radius: 20px;
 }
-
-
 
 /* 募集要項 */
 .recruit-wrapper {
@@ -410,11 +429,10 @@
     align-items: center;
 }
 
-
 .recruit-label h2 {
     text-align: center;
     font-size: 2rem;
-    color: #08B355;
+    color: #08b355;
     margin-bottom: 40px;
 }
 
@@ -438,7 +456,7 @@
 .recruit-thead th {
     border-top: none;
     border-radius: 15px 0 0 0;
-    background: #08B355;
+    background: #08b355;
     width: 24.94%;
     text-align: left;
     font-weight: 700;
@@ -447,7 +465,7 @@
 
 .recruit-thead td {
     border-radius: 0 15px 0 0;
-    background: #F0F6FA;
+    background: #f0f6fa;
     width: 75.06%;
     padding-left: 40px;
     padding-right: 111px;
@@ -456,16 +474,16 @@
 
 .recruit-tbody th {
     color: #fff;
-    background: #08B355;
+    background: #08b355;
     width: 24.94%;
     text-align: left;
     font-weight: 700;
     padding-left: 50px;
-    border-top: 1px solid #08B355;
+    border-top: 1px solid #08b355;
 }
 
 .recruit-tbody td {
-    background: #F0F6FA;
+    background: #f0f6fa;
     width: 75.06%;
     padding-left: 40px;
     padding-right: 111px;
@@ -474,7 +492,7 @@
 .recruit-tfoot th {
     border-top: none;
     border-radius: 0 0 0 15px;
-    background: #08B355;
+    background: #08b355;
     width: 24.94%;
     text-align: left;
     font-weight: 700;
@@ -483,7 +501,7 @@
 
 .recruit-tfoot td {
     border-radius: 0 0 15px 0;
-    background: #F0F6FA;
+    background: #f0f6fa;
     width: 75.06%;
     padding-left: 40px;
     padding-right: 111px;
@@ -499,11 +517,10 @@
     align-items: center;
 }
 
-
 .company-label h2 {
     text-align: center;
     font-size: 2rem;
-    color: #08B355;
+    color: #08b355;
     margin-bottom: 40px;
 }
 
@@ -523,7 +540,7 @@
 .company-thead th {
     border-top: none;
     border-radius: 15px 0 0 0;
-    background: #08B355;
+    background: #08b355;
     width: 24.94%;
     text-align: left;
     font-weight: 700;
@@ -532,7 +549,7 @@
 
 .company-thead td {
     border-radius: 0 15px 0 0;
-    background: #F0F6FA;
+    background: #f0f6fa;
     width: 75.06%;
     padding-left: 40px;
     padding-right: 111px;
@@ -541,16 +558,16 @@
 
 .company-tbody th {
     color: #fff;
-    background: #08B355;
+    background: #08b355;
     width: 24.94%;
     text-align: left;
     font-weight: 700;
     padding-left: 50px;
-    border-top: 1px solid #08B355;
+    border-top: 1px solid #08b355;
 }
 
 .company-tbody td {
-    background: #F0F6FA;
+    background: #f0f6fa;
     width: 75.06%;
     padding-left: 40px;
     padding-right: 111px;
@@ -559,7 +576,7 @@
 .company-tfoot th {
     border-top: none;
     border-radius: 0 0 0 15px;
-    background: #08B355;
+    background: #08b355;
     width: 24.94%;
     text-align: left;
     font-weight: 700;
@@ -568,7 +585,7 @@
 
 .company-tfoot td {
     border-radius: 0 0 15px 0;
-    background: #F0F6FA;
+    background: #f0f6fa;
     width: 75.06%;
     padding-left: 40px;
     padding-right: 111px;
@@ -611,6 +628,11 @@
 
     .company-wrapper {
         width: calc(100% - 50px);
+    }
+
+    /* 車のスタイル */
+    .car img {
+        width: 50px;
     }
 }
 

@@ -15,10 +15,14 @@
                 <a class="btn" href="#introduction">MOVE ITとは</a>
             </div>
             <ul class="fade">
-                <li><img src="images/mainvisual_02.png" alt=""></li>
-                {{-- <li><img src="images/mainvisual_02.png" alt=""></li> --}}
-                {{-- <li><img src="images/mainvisual3.png" alt=""></li> --}}
+                <li><img src="images/mainvisual.jpg" alt=""></li>
             </ul>
+            <div class="car-a">
+                <img src="images/truck-a.svg" alt="Car">
+            </div>
+            <div class="car-b">
+                <img src="images/truck-b.svg" alt="Car">
+            </div>
         </div>
 
         <section id="introduction" class="introduction">
