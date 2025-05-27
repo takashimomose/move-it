@@ -41,7 +41,7 @@
                     📞 <a href="tel:08074272883">080-7427-2883</a><br>
                     📧 <a href="mailto:info@mvit.jp">info@mvit.jp</a><br>
                     🔗 <a
-                        href="https://jp.indeed.com/cmp/Move-IT-4aa8b968/jobs?jk=2141d2f895f7ed69&start=0&clearPrefilter=1"
+                        href="https://jp.indeed.com/m/viewjob?jk=0287914eeb32be54&from=serpJapan&prevUrl=http%3A%2F%2Fjp.indeed.com%2Fq-%25E8%25BB%25BD%25E8%25B2%25A8%25E7%2589%25A9%25E5%25AE%25B6%25E5%2585%25B7%25E9%2585%258D%25E9%2580%2581-%25E6%25B1%2582%25E4%25BA%25BA.html&mclk=default&xpse=SoCY67I3xIBNZowE9B0LbzkdCdPP&xfps=464bcfc7-33b7-4141-9692-2ae8f581e04f&xkcb=SoCR67M3xIBN4VQjM50JbzkdCdPP"
                         target="_blank" rel="noopener noreferrer">Indeedの求人ページはこちら</a>
                 </p>
             </div>
