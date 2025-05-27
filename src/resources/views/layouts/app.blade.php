@@ -60,6 +60,7 @@
                         <li class="menu_item"><a href="{{ route('index') }}#introduction">MOVE ITとは</a></li>
                         <li class="menu_item"><a href="{{ route('index') }}#requirements">求めるのはこんな方</a></li>
                         <li class="menu_item"><a href="{{ route('index') }}#faq">よくある質問</a></li>
+                        <li class="menu_item"><a href="{{ route('job.show') }}">配送案件</a></li>
                     </ul>
                     <ul class="inquiry">
                         <li class="menu_item"><a href="{{ route('ceo.show') }}">代表あいさつ</a></li>

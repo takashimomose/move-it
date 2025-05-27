@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\IndexController;
+use App\Http\Controllers\JobController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +28,6 @@ Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.
 Route::middleware('clear_session_for_non_contact')->group(function () {
     Route::get('/', [IndexController::class, 'index'])->name('index');
     Route::get('/ceo', [IndexController::class, 'show'])->name('ceo.show');
+    Route::get('/jobs', [JobController::class, 'show'])->name('job.show');
     Route::get('/contact/complete', [ContactController::class, 'complete'])->name('contact.complete');
 });
